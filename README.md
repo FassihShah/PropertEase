@@ -16,7 +16,7 @@ PropertEase is a powerful **real estate marketplace** built with **ASP.NET MVC**
 
 ## 🛠️ Tech Stack
 - **Frontend:** ASP.NET MVC, Razor Views, AJAX, Bootstrap  
-- **Backend:** ASP.NET Core, Entity Framework Core  
+- **Backend:** ASP.NET Core, Entity Framework Core, SignalR
 - **Database:** SQL Server  
 - **Authentication:** ASP.NET Identity  
 - **Architecture:** Clean Architecture (Domain, Application, Infrastructure, Presentation Layers)  
