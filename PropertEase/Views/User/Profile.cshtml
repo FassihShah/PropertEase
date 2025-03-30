@@ -1,0 +1,110 @@
+﻿@using Application
+@model UserDTO
+@{
+    ViewData["Title"] = "Profile Page";
+}
+
+<body>
+        <div class="container mt-4">
+            <link rel="stylesheet" href="~/css/profile.css"/>
+            <div class="row">
+                <!-- Sidebar Section -->
+                <div class="col-md-3">
+                    <div class="sidebar">
+                        <h4 class="mb-4">Dashboard</h4>
+                        <a href="/User/MyProperties">
+                            <i class="fas fa-list-alt me-2"></i> My Listings
+                        </a>
+                        <a href="/Property/AddProperty">
+                            <i class="fas fa-plus-square me-2"></i> Add Property
+                        </a>
+                        <a href="/Message/ReceivedMessages">
+                            <i class="fas fa-inbox me-2"></i> Inbox
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile and Form Section -->
+                <div class="col-md-9">
+                <!-- Profile Information -->
+                <div class="profile-card">
+                    @if (Model.ProfilePicture != null)
+                    {  
+                        <img src="@Model.ProfilePicture.Url" alt="Profile Picture" />
+                    }
+                    else
+                    {
+                        <img src="https://via.placeholder.com/100" alt="Default Profile Picture" />
+                    }
+                    <div>
+                        <h4>@Model.FullName</h4>
+                        <p class="text-muted">@Model.Email</p>
+                    </div>
+                </div>
+
+
+                    <!-- Additional Information Form -->
+                    <div class="form-section">
+                        <h4 class="mb-4">Additional Information</h4>
+                        <form asp-action="UpdateProfile" method="post" enctype="multipart/form-data">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="FullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="FullName" name="FullName" value="@Model.FullName" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="PhoneNumber" class="form-label">Mobile</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">+92</span>
+                                        <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="City" class="form-label">City</label>
+                                    <select id="City" name="City" class="form-select">
+                                        <option selected>Select City</option>
+                                        <option value="Lahore">Lahore</option>
+                                        <option value="Karachi">Karachi</option>
+                                        <option value="Islamabad">Islamabad</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            @if (User.IsInRole("Agent"))
+                            {
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="AgentLicenseNumber" class="form-label">Agent License Number</label>
+                                        <input type="text" class="form-control" id="AgentLicenseNumber" name="AgentLicenseNumber" value="@Model.AgentLicenseNumber" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="AgencyName" class="form-label">Agency Name</label>
+                                        <input type="text" class="form-control" id="AgencyName" name="AgencyName" value="@Model.AgencyName" />
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Region" class="form-label">Region</label>
+                                    <input type="text" class="form-control" id="Region" name="Region" value="@Model.Region" />
+                                </div>
+                            }
+
+                            <div class="mb-3">
+                                <label for="ProfilePicture" class="form-label">Upload a Picture</label>
+                                <input type="file" class="form-control" id="ProfilePicture" name="ProfilePicture" />
+                            </div>
+
+                            <button type="submit" class="btn">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+

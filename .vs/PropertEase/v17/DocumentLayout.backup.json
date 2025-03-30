@@ -1,0 +1,1270 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\infrastructure\\identity\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\identity\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\controllers\\propertycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\controllers\\propertycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\infrastructure\\repositories\\propertyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\propertyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\infrastructure\\repositories\\propertytyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\propertytyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\infrastructure\\repositories\\propertypurposerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\propertypurposerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\infrastructure\\repositories\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\infrastructure\\repositories\\locationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\locationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\infrastructure\\repositories\\imagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\imagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\infrastructure\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\services\\propertytypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\services\\propertytypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\services\\propertyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\services\\propertyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\services\\propertypurposeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\services\\propertypurposeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\services\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\services\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\services\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\services\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\infrastructure\\identity\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\identity\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\admin\\viewuserproperties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\admin\\viewuserproperties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\admin\\allusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\admin\\allusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\admin\\allproperties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\admin\\allproperties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\admin\\allagents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\admin\\allagents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\admin\\alladmins.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\admin\\alladmins.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\admin\\adminprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\admin\\adminprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\admin\\addadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\admin\\addadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\message\\receivedmessages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\message\\receivedmessages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\property\\addproperty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\property\\addproperty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\property\\confirmdelete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\property\\confirmdelete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\property\\listproperties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\property\\listproperties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\property\\propertydetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\property\\propertydetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\search\\listfilters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\search\\listfilters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\user\\myproperties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\user\\myproperties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\user\\agentsignup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\user\\agentsignup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\shared\\_propertieslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\shared\\_propertieslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\entities\\viewmodels\\detailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\viewmodels\\detailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\infrastructure\\identity\\myapplicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\identity\\myapplicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\entities\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\interfaces\\iimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\iimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\propertease\\views\\message\\sentmessages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9900A14D-5CF9-4D28-A378-536E213C78F2}|PropertEase\\PropertEase.csproj|solutionrelative:propertease\\views\\message\\sentmessages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\entities\\viewmodels\\propertysearchmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\viewmodels\\propertysearchmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\interfaces\\ilocationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ilocationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\interfaces\\ilocationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\ilocationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\interfaces\\iimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\interfaces\\ipropertyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ipropertyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\interfaces\\ipropertytyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\ipropertytyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\interfaces\\ipropertyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\ipropertyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\interfaces\\ipropertypurposerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\ipropertypurposerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\interfaces\\imessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\imessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\interfaces\\ipropertytypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ipropertytypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\interfaces\\ipropertypurposeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ipropertypurposeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\interfaces\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\interfaces\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\application\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4483B0DE-54ED-4D43-9189-71706D2E757E}|Application\\Application.csproj|solutionrelative:application\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\entities\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\entities\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\entities\\searchmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\searchmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\entities\\propertytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\propertytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\entities\\propertypurpose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\propertypurpose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B00C6C95-EB91-490D-A545-046F7660E92A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|c:\\users\\dell\\source\\repos\\propertease-clean architecture\\domain\\entities\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4B8187-60D0-4FAC-BE50-C1C7A4D10301}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "PropertEase\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "PropertEase\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-18T17:12:54.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PropertyController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Controllers\\PropertyController.cs",
+              "RelativeDocumentMoniker": "PropertEase\\Controllers\\PropertyController.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Controllers\\PropertyController.cs",
+              "RelativeToolTip": "PropertEase\\Controllers\\PropertyController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:54:02.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SearchController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Controllers\\SearchController.cs",
+              "RelativeDocumentMoniker": "PropertEase\\Controllers\\SearchController.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Controllers\\SearchController.cs",
+              "RelativeToolTip": "PropertEase\\Controllers\\SearchController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwCUAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T10:17:09.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "PropertEase\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Controllers\\UserController.cs",
+              "RelativeToolTip": "PropertEase\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAcwA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:11:14.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Identity\\UserService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Identity\\UserService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Identity\\UserService.cs",
+              "RelativeToolTip": "Infrastructure\\Identity\\UserService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAArwCgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T10:34:22.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "PropertEase\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "PropertEase\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:54:59.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T19:27:13.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "PropertEase\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "PropertEase\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAqwC4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T10:16:43.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MessageController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Controllers\\MessageController.cs",
+              "RelativeDocumentMoniker": "PropertEase\\Controllers\\MessageController.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Controllers\\MessageController.cs",
+              "RelativeToolTip": "PropertEase\\Controllers\\MessageController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T10:16:48.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PropertyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\PropertyRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\PropertyRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\PropertyRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\PropertyRepository.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAA4wDMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:32:45.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PropertyTypeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\PropertyTypeRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\PropertyTypeRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\PropertyTypeRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\PropertyTypeRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T23:00:22.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PropertyPurposeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\PropertyPurposeRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\PropertyPurposeRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\PropertyPurposeRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\PropertyPurposeRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:55:36.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MessageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\MessageRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\MessageRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\MessageRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\MessageRepository.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA9wAgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:52:49.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LocationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\LocationRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\LocationRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\LocationRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\LocationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T23:01:10.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ImageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\ImageRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\ImageRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\ImageRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\ImageRepository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwCsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T23:01:55.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\CategoryRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Repositories\\CategoryRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\CategoryRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBUAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:54:53.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\UserDTO.cs",
+              "RelativeDocumentMoniker": "Application\\UserDTO.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\UserDTO.cs",
+              "RelativeToolTip": "Application\\UserDTO.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAxwAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T10:39:03.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PropertyTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\PropertyTypeService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\PropertyTypeService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\PropertyTypeService.cs",
+              "RelativeToolTip": "Application\\Services\\PropertyTypeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T18:27:12.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PropertyService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\PropertyService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\PropertyService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\PropertyService.cs",
+              "RelativeToolTip": "Application\\Services\\PropertyService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T10:25:07.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PropertyPurposeService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\PropertyPurposeService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\PropertyPurposeService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\PropertyPurposeService.cs",
+              "RelativeToolTip": "Application\\Services\\PropertyPurposeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T18:26:08.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MessageService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\MessageService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\MessageService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\MessageService.cs",
+              "RelativeToolTip": "Application\\Services\\MessageService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwAsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T18:24:53.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LocationService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\LocationService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\LocationService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\LocationService.cs",
+              "RelativeToolTip": "Application\\Services\\LocationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T18:15:00.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ImageService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\ImageService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\ImageService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\ImageService.cs",
+              "RelativeToolTip": "Application\\Services\\ImageService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T18:12:57.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Services\\CategoryService.cs",
+              "RelativeToolTip": "Application\\Services\\CategoryService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAADwvwsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T18:12:21.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Identity\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Identity\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Identity\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Identity\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:36:24.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Program.cs",
+              "RelativeDocumentMoniker": "PropertEase\\Program.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Program.cs",
+              "RelativeToolTip": "PropertEase\\Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wBQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T12:43:29.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAywBUAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T10:38:47.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AllAdmins.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\AllAdmins.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Admin\\AllAdmins.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\AllAdmins.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Admin\\AllAdmins.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T18:48:20.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ViewUserProperties.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\ViewUserProperties.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Admin\\ViewUserProperties.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\ViewUserProperties.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Admin\\ViewUserProperties.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T19:34:42.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AllUsers.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\AllUsers.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Admin\\AllUsers.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\AllUsers.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Admin\\AllUsers.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T19:26:01.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AllProperties.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\AllProperties.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Admin\\AllProperties.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\AllProperties.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Admin\\AllProperties.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-08T16:55:05.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AllAgents.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\AllAgents.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Admin\\AllAgents.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\AllAgents.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Admin\\AllAgents.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T18:49:23.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AdminProfile.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\AdminProfile.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Admin\\AdminProfile.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\AdminProfile.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Admin\\AdminProfile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T18:47:44.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AddAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\AddAdmin.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Admin\\AddAdmin.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Admin\\AddAdmin.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Admin\\AddAdmin.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T18:47:08.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAE0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T07:20:41.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ReceivedMessages.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Message\\ReceivedMessages.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Message\\ReceivedMessages.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Message\\ReceivedMessages.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Message\\ReceivedMessages.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T19:35:45.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AddProperty.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Property\\AddProperty.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Property\\AddProperty.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Property\\AddProperty.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Property\\AddProperty.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T11:47:59.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ConfirmDelete.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Property\\ConfirmDelete.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Property\\ConfirmDelete.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Property\\ConfirmDelete.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Property\\ConfirmDelete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T07:31:17.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ListProperties.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Property\\ListProperties.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Property\\ListProperties.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Property\\ListProperties.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Property\\ListProperties.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T07:33:50.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "PropertyDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Property\\PropertyDetails.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Property\\PropertyDetails.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Property\\PropertyDetails.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Property\\PropertyDetails.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T07:35:11.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ListFilters.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Search\\ListFilters.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Search\\ListFilters.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Search\\ListFilters.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Search\\ListFilters.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T07:42:08.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\User\\Profile.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\User\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\User\\Profile.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\User\\Profile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T11:23:45.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "MyProperties.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\User\\MyProperties.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\User\\MyProperties.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\User\\MyProperties.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\User\\MyProperties.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T11:31:51.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\User\\Login.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\User\\Login.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\User\\Login.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\User\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T17:49:59.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "AgentSignup.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\User\\AgentSignup.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\User\\AgentSignup.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\User\\AgentSignup.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\User\\AgentSignup.cshtml",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T18:00:33.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "_PropertiesList.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Shared\\_PropertiesList.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Shared\\_PropertiesList.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Shared\\_PropertiesList.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Shared\\_PropertiesList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T07:55:04.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T07:46:07.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T07:42:55.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\User\\Register.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\User\\Register.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\User\\Register.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\User\\Register.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwA4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T17:51:27.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "DetailsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\ViewModels\\DetailsViewModel.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\ViewModels\\DetailsViewModel.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\ViewModels\\DetailsViewModel.cs",
+              "RelativeToolTip": "Domain\\Entities\\ViewModels\\DetailsViewModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:51:48.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "MyApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Identity\\MyApplicationUser.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Identity\\MyApplicationUser.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Identity\\MyApplicationUser.cs",
+              "RelativeToolTip": "Infrastructure\\Identity\\MyApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:37:09.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Property.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\Property.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Property.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\Property.cs",
+              "RelativeToolTip": "Domain\\Entities\\Property.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA4wA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:49:51.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\appsettings.json",
+              "RelativeDocumentMoniker": "PropertEase\\appsettings.json",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\appsettings.json",
+              "RelativeToolTip": "PropertEase\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-14T12:39:55.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "IImageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\IImageRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IImageRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\IImageRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IImageRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:27:04.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "SentMessages.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Message\\SentMessages.cshtml",
+              "RelativeDocumentMoniker": "PropertEase\\Views\\Message\\SentMessages.cshtml",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\PropertEase\\Views\\Message\\SentMessages.cshtml",
+              "RelativeToolTip": "PropertEase\\Views\\Message\\SentMessages.cshtml",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T19:42:00.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "PropertySearchModel.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\ViewModels\\PropertySearchModel.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\ViewModels\\PropertySearchModel.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\ViewModels\\PropertySearchModel.cs",
+              "RelativeToolTip": "Domain\\Entities\\ViewModels\\PropertySearchModel.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:51:58.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "ILocationService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\ILocationService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\ILocationService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\ILocationService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\ILocationService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T13:45:36.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ILocationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\ILocationRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\ILocationRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\ILocationRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\ILocationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:26:39.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "IImageService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\IImageService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IImageService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\IImageService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IImageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T13:45:00.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "IPropertyService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\IPropertyService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IPropertyService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\IPropertyService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IPropertyService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T01:47:23.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "IPropertyPurposeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\IPropertyPurposeRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IPropertyPurposeRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\IPropertyPurposeRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IPropertyPurposeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:25:47.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "IMessageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\IMessageRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IMessageRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\IMessageRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IMessageRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:24:53.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "IPropertyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\IPropertyRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IPropertyRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\IPropertyRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IPropertyRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwBIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:23:52.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "IPropertyTypeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\IPropertyTypeRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IPropertyTypeRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\IPropertyTypeRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IPropertyTypeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:26:09.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\ICategoryRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Interfaces\\ICategoryRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\ICategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T22:25:21.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "IPropertyTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\IPropertyTypeService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IPropertyTypeService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\IPropertyTypeService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IPropertyTypeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T13:47:27.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "IPropertyPurposeService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\IPropertyPurposeService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IPropertyPurposeService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\IPropertyPurposeService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IPropertyPurposeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T13:46:57.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "IMessageService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\IMessageService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IMessageService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\IMessageService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IMessageService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T14:27:35.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\ICategoryService.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Application\\Interfaces\\ICategoryService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\ICategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T13:46:15.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Category.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\Category.cs",
+              "RelativeToolTip": "Domain\\Entities\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:51:40.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "Image.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\Image.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Image.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\Image.cs",
+              "RelativeToolTip": "Domain\\Entities\\Image.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:51:51.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "Location.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\Location.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Location.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\Location.cs",
+              "RelativeToolTip": "Domain\\Entities\\Location.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAwwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:51:53.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\Message.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Message.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\Message.cs",
+              "RelativeToolTip": "Domain\\Entities\\Message.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:51:55.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "SearchModel.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\SearchModel.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\SearchModel.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\SearchModel.cs",
+              "RelativeToolTip": "Domain\\Entities\\SearchModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:52:00.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "PropertyType.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\PropertyType.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\PropertyType.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\PropertyType.cs",
+              "RelativeToolTip": "Domain\\Entities\\PropertyType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:51:59.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "PropertyPurpose.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\PropertyPurpose.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\PropertyPurpose.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\PropertyPurpose.cs",
+              "RelativeToolTip": "Domain\\Entities\\PropertyPurpose.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:51:57.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Infrastructure\\Infrastructure.csproj",
+              "RelativeToolTip": "Infrastructure\\Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-14T12:52:13.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\PropertEase-Clean Architecture\\Domain\\Entities\\ErrorViewModel.cs",
+              "RelativeToolTip": "Domain\\Entities\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:51:50.416Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

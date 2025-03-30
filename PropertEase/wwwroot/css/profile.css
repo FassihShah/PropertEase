@@ -1,0 +1,66 @@
+﻿body {
+    background-color: #EEF2F6;
+    font-family: 'Poppins Regular';
+}
+
+.form-section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    background-color: #020617;
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+}
+
+    .sidebar a {
+        text-decoration: none;
+        color: white;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.3s ease;
+    }
+
+        .sidebar a:hover {
+            background-color: #64748b;
+            border-radius: 5px;
+            padding-left: 8px;
+        }
+
+    .sidebar i {
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+    .profile-card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+
+.form-section .btn {
+    background-color: #ea580c;
+    color: white;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+}

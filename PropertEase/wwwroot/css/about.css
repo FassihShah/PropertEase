@@ -1,0 +1,72 @@
+
+body {
+  background-color: #FED7AA;
+  color: #333;
+  font-family:'Poppins Regular' 
+}
+.shadow-box {
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
+.container {
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.lead {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #555;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* About Section Styling */
+.row {
+  margin-top: 30px;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-left: 30px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  padding-left: 30px;
+}
+
+ul {
+  padding-left: 0;
+  margin-left: 30px;
+}
+
+ul li {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+ul li strong {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .row {
+      margin-top: 20px;
+  }
+
+  h2 {
+      font-size: 2rem;
+  }
+}

@@ -1,0 +1,194 @@
+﻿@{
+    ViewData["Title"] = "Add Property";
+}
+
+<body>
+    <div class="container">
+        <style>
+            body {
+                background-color: #EEF2F6;
+                font-family: 'Poppins Regular', sans-serif;
+                color: #020617;
+            }
+
+            .form-container {
+                margin: 150px auto;
+                max-width: 1200px;
+                background: #FFF;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+                .form-container h1 {
+                    font-family: 'PP Hatton bold', sans-serif;
+                    color: #EA580C;
+                    font-size: 2rem;
+                    margin-bottom: 20px;
+                }
+
+            .form-group label {
+                font-size: 1rem;
+                font-weight: 600;
+                color: #333;
+            }
+
+            .card {
+                border: 1px solid #FED7AA;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+
+            .card-header {
+                background-color: #FED7AA;
+                color: #020617;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+
+            .btn-custom {
+                background-color: #EA580C;
+                color: #FFFFFF;
+                border: none;
+                border-radius: 10px;
+                padding: 10px 20px;
+                font-size: 1.2rem;
+                transition: background-color 0.3s ease;
+            }
+
+                .btn-custom:hover {
+                    background-color: black;
+                    color: #FFFFFF;
+                }
+
+            .form-row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 20px;
+            }
+
+            .form-group {
+                flex: 1;
+                min-width: 45%;
+            }
+
+            .form-group-full {
+                flex: 1 100%;
+            }
+        </style>
+        <div class="form-container">
+            <h1>Add New Property</h1>
+            <form asp-action="AddProperty" method="POST" enctype="multipart/form-data">
+                <!-- Basic Details -->
+                <div class="card">
+                    <div class="card-header">Basic Details</div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Title">Property Title</label>
+                                <input name="Title" class="form-control" placeholder="Enter property title" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="Description">Description</label>
+                                <textarea name="Description" class="form-control" placeholder="Enter description" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="PropertyTypeID">Property Type</label>
+                                <select name="PropertyTypeID" class="form-control" required>
+                                    <option value="" disabled selected>Select property type</option>
+                                    @foreach (var propertyType in (List<PropertyType>)ViewBag.PropertyTypes)
+                                    {
+                                        <option value="@propertyType.PropertyTypeId">@propertyType.Name</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Price">Price</label>
+                                <input name="Price" type="number" class="form-control" placeholder="Enter price" required min="0" />
+                            </div>
+                            <div class="form-group">
+                                <label for="Bedrooms">Bedrooms</label>
+                                <input name="Bedrooms" type="number" class="form-control" placeholder="Enter number of bedrooms" required min="0" />
+                            </div>
+                            <div class="form-group">
+                                <label for="Bathrooms">Bathrooms</label>
+                                <input name="Bathrooms" type="number" class="form-control" placeholder="Enter number of bathrooms" required min="0" />
+                            </div>
+                            <div class="form-group">
+                                <label for="Size">Size (Marla)</label>
+                                <input name="Size" type="number" class="form-control" placeholder="Enter property size" required min="0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location Details -->
+                <div class="card">
+                    <div class="card-header">Location Details</div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="City">City</label>
+                                <input name="City" class="form-control" placeholder="Enter city name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="Area">Area</label>
+                                <input name="Area" class="form-control" placeholder="Enter area" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="Street">Street</label>
+                                <input name="Street" class="form-control" placeholder="Enter street address" required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category and Purpose -->
+                <div class="card">
+                    <div class="card-header">Category and Purpose</div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="CategoryID">Category</label>
+                                <select name="CategoryID" class="form-control" required>
+                                    <option value="" disabled selected>Select category</option>
+                                    @foreach (var category in (List<Category>)ViewBag.Categories)
+                                    {
+                                        <option value="@category.CategoryId">@category.Name</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="PurposeID">Purpose</label>
+                                <select name="PurposeID" class="form-control" required>
+                                    <option value="" disabled selected>Select purpose</option>
+                                    @foreach (var purpose in (List<PropertyPurpose>)ViewBag.Purposes)
+                                    {
+                                        <option value="@purpose.PropertyPurposeId">@purpose.Name</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Images -->
+                <div class="card">
+                    <div class="card-header">Upload Images</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="Images">Images</label>
+                            <input type="file" name="Images" class="form-control-file" multiple />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-custom">Add Property</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

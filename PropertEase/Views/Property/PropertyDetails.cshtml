@@ -1,0 +1,396 @@
+﻿@model Domain.Entities.ViewModels.DetailsViewModel
+@using Application.Interfaces
+@using Application
+@inject IUserService userService
+@inject IPropertyService propertyService
+@{
+    ViewData["Title"] = "Details";
+    var id = await userService.GetCurrentUserIdAsync();
+    var user = await userService.GetByIdAsync(id);
+}
+<body>
+    <main style="padding: 30px 100px;">
+        <style>
+    body {
+      background-color: #EEF2F6;
+      color: #020617;
+      font-family: 'Poppins Regular';
+    }
+
+    .property-header h1 {
+      font-family: 'PP Hatton bold';
+    }
+
+    .property-specs .card {
+      background-color: #FED7AA;
+      color: #020617;
+      border-radius: 25px;
+      border-color: #FED7AA;
+      box-shadow: 0px 6px 10px rgba(110, 68, 1, 0.2);
+      margin-top: 20px;
+    }
+
+    .property-specs .card i {
+      font-size: 2rem;
+      color: #EA580C;
+    }
+
+    .property-specs .card-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .property-specs .card-title {
+      margin-left: 10px;
+      font-size: 1.2rem;
+    }
+
+    .property-description {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #FED7AA;
+      border-radius: 10px;
+      border: outset black;
+    }
+
+    .btn-custom {
+      background-color: #64748B;
+      color: #FFFFFF;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background-color: #EA580C;
+      color: #FFFFFF;
+    }
+
+    .carousel-inner img {
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    #map {
+      height: 400px;
+      width: 100%;
+      border-radius: 15px;
+      background-color: #dbd9d8;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .label {
+      font-weight: bold;
+      width: 150px;
+      /* Adjust width as needed */
+      display: inline-block;
+    }
+
+    .value {
+      /* Optional styling for values */
+      font-weight: normal;
+    }
+
+    .info {
+      margin-top: 20px;
+    }
+
+    .info ul li {
+      border-bottom: solid black;
+    }
+
+    .info ul li .value {
+      padding-left: 80px;
+    }
+
+    .carousel {
+      border: solid black;
+      border-radius: 20px;
+      width: 70%;
+    }
+
+    .contact-card {
+      max-width: 800px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      color: #020617;
+      margin-top: 50px;
+    }
+
+    .contact-card .contact-info {
+      flex-grow: 1;
+    }
+
+    .contact-card h3 {
+      font-family: 'PP Hatton bold';
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: black;
+    }
+
+    .contact-card .contact-info p {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .contact-card .contact-info i {
+      color: #EA580C;
+      margin-right: 10px;
+    }
+
+    .contact-card button {
+      background-color: #EA580C;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-left: 20px;
+    }
+
+    .contact-card .bi {
+      margin-right: 10px;
+    }
+
+    .contact-card .fas {
+      margin-right: 10px;
+    }
+
+    .contact-card button:hover {
+      background-color: #ef8146;
+    }
+  </style>
+        <div class="container-fluid mt-2 mt-lg-5">
+            <div class="property-header">
+                <h1>@Model.Title</h1>
+                <p class="text-muted">@Model.Location</p>
+            </div>
+
+            <!-- Carousel Section -->
+            <div id="propertyCarousel" class="carousel slide mt-4" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    @if (Model.ImagesUrl != null && Model.ImagesUrl.Count > 0)
+                    {
+                        @for (int i = 0; i < Model.ImagesUrl.Count; i++)
+                        {
+                            <li data-target="#propertyCarousel" data-slide-to="@i" class="@(i == 0 ? "active" : "")"></li>
+                        }
+                    }
+                    else
+                    {
+                        <li data-target="#propertyCarousel" data-slide-to="0" class="active"></li>
+                    }
+                </ol>
+                <div class="carousel-inner">
+                    @if (Model.ImagesUrl != null && Model.ImagesUrl.Count > 0)
+                    {
+                        @for (int i = 0; i < Model.ImagesUrl.Count; i++)
+                        {
+                            <div class="carousel-item @(i == 0 ? "active" : "")">
+                                <img src="@Model.ImagesUrl[i]" class="d-block w-100" alt="Property Image @(i + 1)">
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="carousel-item active">
+                            <img src="https://via.placeholder.com/100" class="d-block w-100" alt="No Images Available">
+                        </div>
+                    }
+                </div>
+                <a class="carousel-control-prev" href="#propertyCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#propertyCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+            <div class="mt-4">
+                <h3 style="color: black;font-family: 'PP Hatton bold';">PKR @Model.Price</h3>
+            </div>
+
+            <div class="row mt-4 property-specs">
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            @if (Model.PropertyType == "House" || Model.PropertyType == "Apartment")
+                            {
+                                <i class="fas fa-bed"></i>
+                                <h5 class="card-title">@Model.Bedrooms Bedrooms</h5>
+                            }
+                            else
+                            {
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h5 class="card-title">@Model.Location.Split(',')[2]</h5>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            @if (Model.PropertyType == "House" || Model.PropertyType == "Apartment")
+                            {
+                                <i class="fas fa-bath"></i>
+                                <h5 class="card-title">@Model.Bathrooms Bathrooms</h5>
+                            }
+                            else
+                            {
+                                <i class="fas fa-tags"></i>
+                                <h5 class="card-title">@Model.Category</h5>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fas fa-ruler-combined"></i>
+                            <h5 class="card-title">@Model.Size Marla</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fas fa-home"></i>
+                            <h5 class="card-title">@Model.PropertyType</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid mt-lg-4 mt-2">
+                <div class="row gx-3 justify-content-between">
+                    <div class="col-7">
+                        <div class="property-description">
+                            <h3 class="mb-3">Description</h3>
+                            <p>@Model.Description</p>
+                        </div>
+                    </div>
+
+                    <div class="col-4 info">
+                        <h3 class="mb-4">Essential Information</h3>
+                        <ul>
+                            <li>
+                                <span class="label">Category:</span>
+                                <span class="value">@Model.Category</span>
+                            </li>
+                            <li>
+                                <span class="label">Purpose:</span>
+                                <span class="value">@Model.Purpose</span>
+                            </li>
+                            <li>
+                                <span class="label">Type:</span>
+                                <span class="value">@Model.PropertyType</span>
+                            </li>
+                            <li>
+                                <span class="label">Size:</span>
+                                <span class="value">@Model.Size Marla</span>
+                            </li>
+                            <li>
+                                <span class="label">Area:</span>
+                                <span class="value">@Model.Location.Split(',')[1] </span>
+                            </li>
+                            <li>
+                                <span class="label">City:</span>
+                                <span class="value">@Model.Location.Split(',')[2] </span>
+                            </li>
+							@if (Model.PropertyType == "House" || Model.PropertyType == "Apartment")
+							{
+								<li>
+									<span class="label">Bedrooms:</span>
+									<span class="value">@Model.Bedrooms</span>
+								</li>
+							}
+							@if (Model.PropertyType != "Plot")
+							{
+								<li>
+									<span class="label">Bathrooms:</span>
+									<span class="value">@Model.Bathrooms</span>
+								</li>
+							}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h3>Contact Agent</h3>
+                    <p><i class="fas fa-user"></i> <strong>@Model.SellerName</strong></p>
+                </div>
+                <button class="btn btn-custom" data-toggle="modal" data-target="#contactModal">Message</button>
+
+                <!-- Modal Structure -->
+                <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Send a Message</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: white; color: black; border: none;">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="@Url.Action("SendMessage", "Message")" method="post">
+                                    <input type="hidden" name="PropertyId" value="@Model.PropertyId" />
+                                    <input type="hidden" id="senderName" value="@user.FullName" />
+                                    <input type="hidden" id="receiverId" value="@((await propertyService.GetByIdAsync(Model.PropertyId)).SellerId)" />
+                                    <input type="hidden" id="propertyTitle" value="@((await propertyService.GetByIdAsync(Model.PropertyId)).Title)" />
+                                    <div class="form-group">
+                                        <label for="name">Full Name</label>
+                                        <input type="text" class="form-control" id="name" name="FullName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" class="form-control" id="email" name="Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Message</label>
+                                        <textarea class="form-control" id="message" name="MessageContent" rows="4" required>
+I am interested in your property "@Model.Title" at "@Model.Location". Please get in touch with me.
+                        </textarea>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="mt-5">
+                <h3>Location</h3>
+                <div id="map">
+                    <p class="text-muted">Map soon!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

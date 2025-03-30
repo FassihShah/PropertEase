@@ -1,0 +1,78 @@
+﻿@using Application
+@model UserDTO
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; 
+    ViewData["Title"] = "Add Admin | PropertEase";
+}
+
+<div class="main-content">
+    <style>
+        .main-content {
+            margin-left: 260px; 
+            padding: 20px;
+            background-color: #fff5f0; 
+            min-height: 100vh;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-title {
+            font-family: 'PP Hatton medium', sans-serif;
+            font-size: 1.8rem;
+            color: #EA580C;
+            border-bottom: 2px solid #EA580C;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #EA580C;
+        }
+
+        input.form-control {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        button.btn-primary {
+            background-color: #34d399;
+            border-color: #34d399;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        button.btn-primary:hover {
+            background-color: #059669;
+            border-color: #059669;
+        }
+    </style>
+
+    <h2 class="dashboard-title mb-4">Add Admin</h2>
+
+    <form asp-action="AddAdmin" method="post">
+        <div class="form-group">
+            <label for="FullName">Full Name</label>
+            <input type="text" id="FullName" name="FullName" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="email" id="Email" name="Email" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="password" id="Password" name="Password" class="form-control" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Admin</button>
+    </form>
+</div>

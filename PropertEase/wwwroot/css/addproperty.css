@@ -1,0 +1,55 @@
+﻿body {
+    background-color: #EEF2F6;
+    font-family: 'Poppins Regular', sans-serif;
+    color: #020617;
+}
+
+.form-container {
+    margin: 150px auto;
+    max-width: 1200px;
+    background: #FFF;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .form-container h1 {
+        font-family: 'PP Hatton bold', sans-serif;
+        color: #EA580C;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.card {
+    border: 1px solid #FED7AA;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #FED7AA;
+    color: #020617;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-custom {
+    background-color: #EA580C;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-custom:hover {
+        background-color: black;
+        color: #FFFFFF;
+    }

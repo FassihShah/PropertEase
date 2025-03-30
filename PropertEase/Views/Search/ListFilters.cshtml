@@ -1,0 +1,205 @@
+﻿@model Domain.Entities.ViewModels.PropertySearchModel
+@{
+	ViewBag.Title = "Property Categories";
+	var cities = ViewBag.Cities as List<string>;
+	var categories = ViewBag.Categories as List<string>;
+	var types = ViewBag.Types as List<string>;
+	var purposes = ViewBag.Purposes as List<string>;
+}
+@{
+	ViewData["Title"] = "Categories";
+}
+<body>
+	<div class="container categories-container">
+		<style>
+			body {
+				background-color: #EEF2F6;
+				font-family: 'Poppins Regular', sans-serif;
+				color: #020617;
+			}
+
+			.categories-container {
+				margin-top: 50px;
+			}
+
+			.category-section {
+				margin-top: 40px;
+			}
+
+				.category-section h2 {
+					font-family: 'PP Hatton bold', sans-serif;
+					font-size: 1.8rem;
+					color: #EA580C;
+					margin-bottom: 20px;
+				}
+
+			.category-card {
+				background-color: #FED7AA;
+				border: none;
+				border-radius: 15px;
+				text-align: center;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease;
+			}
+			.price{
+				font-family: 'PP Hatton bold', sans-serif;
+				color: #020617;
+				font-size:1rem;
+			}
+
+				.category-card:hover {
+					transform: translateY(-5px);
+				}
+
+			.category-icon {
+				font-size: 3rem;
+				color: #EA580C;
+				margin: 20px 0;
+			}
+
+			.category-name {
+				font-size: 1.5rem;
+				font-family: 'PP Hatton bold', sans-serif;
+				color: #020617;
+			}
+
+			.search-btn {
+				background-color: #64748B;
+				color: #FFFFFF;
+				border: none;
+				border-radius: 10px;
+				padding: 10px 20px;
+				font-size: 1rem;
+				margin-top: 15px;
+				transition: background-color 0.3s ease;
+			}
+
+				.search-btn:hover {
+					background-color: #EA580C;
+					color: #FFFFFF;
+				}
+		</style>
+		<div class="container categories-container">
+			<h1 class="text-center mb-5">Explore Properties</h1>
+
+			<!-- Property Search Form -->
+			<form method="get" action="/Search/SearchProperties">
+				<h2>Types</h2>
+				<div class="row">
+					<!-- Property Type Cards -->
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-home category-icon"></i>
+							<h4 class="category-name">House</h4>
+							<button type="submit" class="search-btn" name="PropertyType" value="House">Search</button>
+						</div>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-map category-icon"></i>
+							<h4 class="category-name">Plot</h4>
+							<button type="submit" class="search-btn" name="PropertyType" value="Plot">Search</button>
+						</div>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-store category-icon"></i>
+							<h4 class="category-name">Shop</h4>
+							<button type="submit" class="search-btn" name="PropertyType" value="Shop">Search</button>
+						</div>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-building category-icon"></i>
+							<h4 class="category-name">Apartment</h4>
+							<button type="submit" class="search-btn" name="PropertyType" value="Apartment">Search</button>
+						</div>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-briefcase category-icon"></i>
+							<h4 class="category-name">Office</h4>
+							<button type="submit" class="search-btn" name="PropertyType" value="Office">Search</button>
+						</div>
+					</div>
+				</div>
+				<h2>Price</h2>
+				<div class="row">
+					<!-- Price Range Cards -->
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-dollar-sign category-icon"></i> 
+							<h4 class="price">1,000,000 PKR - 5,000,000 PKR</h4>
+							<button type="submit" class="search-btn" name="MinPrice" value="1000000">Search</button>
+						</div>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-money-bill-wave category-icon"></i> 
+							<h4 class="price">5,000,000 PKR - 10,000,000 PKR</h4>
+							<button type="submit" class="search-btn" name="MinPrice" value="5000000">Search</button>
+						</div>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-cash-register category-icon"></i>
+							<h4 class="price">10,000,000 PKR - 20,000,000 PKR</h4>
+							<button type="submit" class="search-btn" name="MinPrice" value="10000000">Search</button>
+						</div>
+					</div>
+				</div>
+
+				<h2>Category</h2>
+				<div class="row">
+					<!-- Category Cards -->
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-home category-icon"></i>
+							<h4 class="category-name">Residential</h4>
+							<button type="submit" class="search-btn" name="Category" value="Residential">Search</button>
+						</div>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-building category-icon"></i>
+							<h4 class="category-name">Commercial</h4>
+							<button type="submit" class="search-btn" name="Category" value="Commercial">Search</button>
+						</div>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-industry category-icon"></i>
+							<h4 class="category-name">Industrial</h4>
+							<button type="submit" class="search-btn" name="Category" value="Industrial">Search</button>
+						</div>
+					</div>
+				</div>
+				<h2>Purpose</h2>
+				<div class="row">
+					<!-- Property Purpose Cards -->
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-hand-holding-usd category-icon"></i>
+							<h4 class="category-name">Rent</h4>
+							<button type="submit" class="search-btn" name="Purpose" value="Rent">Search</button>
+						</div>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-dollar-sign category-icon"></i>
+							<h4 class="category-name">Sale</h4>
+							<button type="submit" class="search-btn" name="Purpose" value="Sale">Search</button>
+						</div>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="card category-card">
+							<i class="fas fa-credit-card category-icon"></i>
+							<h4 class="category-name">Installment</h4>
+							<button type="submit" class="search-btn" name="Purpose" value="Installment">Search</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>

@@ -1,0 +1,124 @@
+﻿@functions {
+    string IsActive(string href, string className = "active")
+    {
+        var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+        var action = ViewContext.RouteData.Values["action"]?.ToString();
+        var currentUrl = $"/{controller}/{action}";
+        return href == currentUrl ? className : "";
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PropertEase</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css"/>
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="~/css/navbar.css" />
+        <div class="container">
+            <div class="row gx-5 mt-3 top">
+                <div class="col-12 navborder">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid gx-0">
+                            <a class="navbar-brand" style="font-family: 'PP Hatton medium';" href="/Home/Index">PropertEase</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="bi bi-list" style="color: white;"></i>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav" style="margin-left: 160px;">
+                                    <li class="nav-item">
+                                        <a class="nav-link @IsActive("/Home/Index")" href="/Home/Index">Home</a>
+                                    </li>
+                                    <li class="nav-item ms-1">
+                                        <a class="nav-link @IsActive("/Search/SearchProperties")" href="/Property/ListProperties">Properties</a>
+                                    </li>
+                                    <li class="nav-item ms-1">
+                                        <a class="nav-link @IsActive("/Home/About")" href="/Home/About">About Us</a>
+                                    </li>
+                                    <li class="nav-item ms-1">
+                                        <a class="nav-link @IsActive("/Home/Contact")" href="/Home/Contact">Contact Us</a>
+                                    </li>
+                                    <partial name="_LoginPartial"/>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main">
+        @RenderBody()
+    </main>
+    <footer class="footer">
+        <link rel="stylesheet" href="~/css/footer.css" />
+        <div class="container-fluid">
+            <div class="row ms-4">
+                <div class="col-md-3 col-sm-12">
+                    <h4 class="fw-bold">Subscribe</h4>
+                    <form>
+                        <input type="email" placeholder="Your e-mail" />
+                        <button type="submit">Send</button>
+                    </form>
+                    <p>Subscribe to our newsletter to receive our weekly feed.</p>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <h4 class="fw-bold">Quick Links</h4>
+                    <ul>
+                        <li><a href="/Home/Index">Home</a></li>
+                        <li><a href="/Home/About">About Us</a></li>
+                        <li><a href="/Property/ListProperties">Properties</a></li>
+                        <li><a href="/Home/FAQ">FAQs</a></li>
+                        <li><a href="/Home/Contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <h4 class="fw-bold">Contact Us</h4>
+                    <p>fassihshah22@gmail.com</p>
+                    <p>(123) 456-7890</p>
+                    <h4 class="mt-5 fw-bold">Our Address</h4>
+                    <p>99 Fifth Avenue, 3rd Floor</p>
+                    <p>Samanabad, Lahore</p>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <h4 class="fw-bold">Discover</h4>
+                    <ul>
+                        <li><a href="#">Lahore</a></li>
+                        <li><a href="#">Islamabad</a></li>
+                        <li><a href="#">Karachi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row border-top mt-4">
+                <div class="col-12 mt-5">
+                    <p class="copyright text-center">Copyright © 2024 PropertEase</p>
+                    <div class="social-icons ms-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

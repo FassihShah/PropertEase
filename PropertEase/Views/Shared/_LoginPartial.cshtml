@@ -1,0 +1,37 @@
+﻿@using Application.Interfaces
+@inject IUserService userService
+
+@functions {
+    string IsActive(string href, string className = "active")
+    {
+        var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+        var action = ViewContext.RouteData.Values["action"]?.ToString();
+        var currentUrl = $"/{controller}/{action}";
+        return href == currentUrl ? className : "";
+    }
+}
+
+@if (await userService.IsSignedIn())
+{
+    <li class="nav-item" style="margin-left: 140px;">
+        <a class="nav-link @IsActive("/Property/AddProperty")" asp-controller="Property" asp-action="AddProperty" title="Add Property">Add Property</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @IsActive("/User/Logout")" asp-controller="User" asp-action="Logout" title="Logout">Logout</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @IsActive("/User/Profile")" asp-controller="User" asp-action="Profile" title="Profile">Profile</a>
+    </li>
+}
+else
+{
+    <li class="nav-item" style="margin-left: 140px;">
+        <a class="nav-link @IsActive("/User/Register")" asp-controller="User" asp-action="Register" title="Register">Register</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @IsActive("/User/Login")" asp-controller="User" asp-action="Login" title="Login">Login</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @IsActive("/User/AgentSignup")" asp-controller="User" asp-action="AgentSignup" title="Join as Agent">Join as Agent</a>
+    </li>
+}

@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+<body>
+    <div class="login-container">
+        <link rel="stylesheet" href="~/css/login.css" />
+        <div class="login-card">
+            <h3 style="font-family: 'PP Hatton bold';">Welcome Back!</h3>
+            <form method="post" asp-controller="User" asp-action="Login">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password" required />
+                </div>
+                <div class="mb-3">
+                    <input type="checkbox" name="rememberMe" /> Remember Me
+                </div>
+                <button type="submit" class="btn btn-login">Login</button>
+            </form>
+            <div class="login-footer">
+                <p>Don't have an account? <a href="/User/Register">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+</body>

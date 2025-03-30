@@ -1,0 +1,132 @@
+﻿@using Application.Interfaces
+@inject ILocationService locationService
+@inject IImageService imageService
+@model IEnumerable<Property>
+
+@{
+	ViewData["Title"] = "My Properties";
+}
+
+<body>
+	<section class="container my-4">
+		<style>
+			/* General Page Styling */
+			body {
+				font-family: 'Poppins Regular';
+				background-color: #EEF2F6;
+			}
+
+			h2 {
+				font-weight: 600;
+				color: #EA580C;
+				margin-top: 100px;
+			}
+
+			/* Property Card Styling */
+			.property-card {
+				background-color: #fff;
+				border: 1px solid #ccc;
+				border-radius: 8px;
+				overflow: hidden;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s;
+				position: relative;
+			}
+
+				.property-card img {
+					width: 100%;
+					height: 200px;
+					object-fit: cover;
+				}
+
+				.property-card:hover {
+					transform: translateY(-5px);
+				}
+
+			.property-info {
+				padding: 15px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+				.property-info h5 a {
+					font-size: 1.25rem;
+					margin-bottom: 10px;
+					color: #EA580C;
+				}
+
+				.property-info p {
+					margin: 0;
+					color: #64748B;
+					font-size: 0.95rem;
+				}
+
+				.property-info a {
+					text-decoration: none;
+				}
+
+			.btn-icon {
+				background-color: transparent;
+				border: none;
+				font-size: 1.2rem;
+				cursor: pointer;
+				transition: color 0.3s;
+			}
+
+				.btn-icon.btn-edit:hover:hover {
+					color: black;
+				}
+
+				.btn-icon.btn-delete {
+					color: #f81717;
+				}
+
+				.btn-icon.btn-edit {
+					color: #EA580C;
+				}
+
+				.btn-icon.btn-delete:hover {
+					color: #FF9999;
+				}
+		</style>
+		<h2 class="mb-4" style="font-family: 'PP Hatton medium';">Your Properties</h2>
+		<div class="row" id="my-properties-list">
+			@if (Model != null && Model.Any())
+			{
+				@foreach (var property in Model)
+				{
+					<div class="col-md-4 col-sm-6 mb-4">
+						<div class="property-card">
+							<a href="@Url.Action("PropertyDetails", "Property", new { id = property.PropertyId })" class="d-block">
+								<img src="@((await imageService.GetByPropertyAsync(property.PropertyId)).First().Url)" alt="@property.Title" />
+							</a>
+							<div class="property-info">
+								<div>
+									<h5>
+										<a href="@Url.Action("PropertyDetails", "Property", new { id = property.PropertyId })">@property.Title</a>
+									</h5>
+									<p>
+										<strong>Location:</strong>
+										@((await locationService.GetByPropertyAsync(property.PropertyId)).ToString())
+									</p>
+									<p><strong>Price:</strong> PKR @property.Price</p>
+									<p><strong>Size:</strong> @property.Size Marla</p>
+								</div>
+								<div>
+									<a href="@Url.Action("Edit", "Property", new { id = property.PropertyId })" class="btn-icon btn-edit me-2"><i class="fas fa-edit"></i></a>
+									<a href="@Url.Action("ConfirmDelete", "Property", new { id = property.PropertyId })" class="btn-icon btn-delete"><i class="fas fa-trash-alt"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				}
+			}
+			else
+			{
+				<h4>No Property added!</h4>
+			}
+		</div>
+	</section>
+</body>
+

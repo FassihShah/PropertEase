@@ -1,0 +1,229 @@
+﻿
+@{
+	ViewData["Title"] = "Home";
+}
+
+<div class="container-fluid">
+	<link rel="stylesheet" href="~/css/style.css" />
+	<div class="row gx-0 me-0 pe-0">
+		<div class="col-7">
+			<div class="container mt-5 ms-5">
+				<div class="row ms-1 ms-lg-4 pt-5 text-center">
+					<div class="col-12 heading display-5 text-center text-lg-start">
+						Your One-Stop Marketplace for Buying, Selling, and Renting Properties
+					</div>
+				</div>
+				<div class="row ms-4 mt-5">
+					<div class="col-12 text-muted text-center text-lg-start">
+						Browse thousands of listings, connect with trusted agents, and find your dream property today.
+					</div>
+				</div>
+				<form method="get" action="/Search/SearchProperties">
+				<div class="row ms-4 me-3 mt-4 mt-lg-3 border align-items-center py-2" style="border-radius: 20px;">
+					<!-- Category Dropdown -->
+					<div class="col-12 col-md-3 mb-3 mb-md-0" style="border-right: 1px solid #c5c4c4;">
+						<div class="row ms-3 text-center text-md-start">
+							Category
+						</div>
+						<div class="row ms-3 gx-0">
+							<div class="col-12 ms-0 ps-0">
+								<select id="category" name = "Category" class="form-select">
+										@foreach (var category in ViewBag.Categories as List<string>)
+										{
+														<option value = "@category">@category</option>
+										}
+								</select>
+							</div>
+						</div>
+					</div>
+					<!-- Location Dropdown -->
+					<div class="col-12 col-md-3 mb-3 mb-md-0" style="border-right: 1px solid #c5c4c4;">
+						<div class="row ms-3 text-center text-md-start">
+							Location
+						</div>
+						<div class="row ms-3 gx-0">
+							<div class="col-12 ms-0 ps-0">
+								<select id="location" name="City" class="form-select">
+										@foreach (var location in ViewBag.Cities as List<string>)
+										{
+														<option value="@location">@location</option>
+										}
+								</select>
+							</div>
+						</div>
+					</div>
+					<!-- Type Dropdown -->
+					<div class="col-12 col-md-3 mb-3 mb-md-0">
+						<div class="row ms-3 text-center text-md-start">
+							Type
+						</div>
+						<div class="row ms-3 gx-0">
+							<div class="col-12 ms-0 ps-0">
+								<select id="type" name = "PropertyType" class="form-select">
+										@foreach (var type in ViewBag.Types as List<string>)
+										{
+														<option value = "@type">@type</option>
+										}
+								</select>
+							</div>
+						</div>
+					</div>
+					<!-- Search Button -->
+					<div class="col-12 col-md-3 text-center text-md-start">
+						<button class="search"><i class="bi bi-search"></i></button>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+		<div class="col-5 me-0 pe-0">
+			<img src="/images/bg-4.png" class="img" alt="Property Image">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 bg-secondary mt-5">
+			<h2 class="ms-5 mt-5 mb-2 fw-bold" style="padding-left: 30px; color:white;">Browse Properties</h2>
+		</div>
+	</div>
+
+<div class="row bg-secondary pb-5">
+  <div class="col-12">
+	<div class="cards-container ms-lg-5">
+	  <!-- Homes Card -->
+	  <div class="card">
+		<div class="card-header">
+		  <i class="bi bi-houses-fill fs-2 me-1" style="color: #ff7525;"></i>
+		  <h3 class="pt-2">Homes</h3>
+		</div>
+		<div class="card-tabs">
+		  <span class="tab active">Popular</span>
+		  <span class="tab">Type</span>
+		  <span class="tab">Area Size</span>
+		</div>
+		<div class="card-content">
+		  <!-- Homes Filter Options -->
+		  <div class="option">
+			<form action="/Search/SearchProperties" method="get">
+			  <input type="hidden" name="MaxSize" value="5">
+			  <button type="submit" class="btn">5 Marla</button>
+			</form>
+		  </div>
+		  <div class="option">
+			<form action="/Search/SearchProperties" method="get">
+			  <input type="hidden" name="MaxSize" value="10">
+			  <button type="submit" class="btn">10 Marla</button>
+			</form>
+		  </div>
+		  <div class="option">
+			<form action="/Search/SearchProperties" method="get">
+			  <input type="hidden" name="Size" value="3">
+			  <button type="submit" class="btn">3 Marla</button>
+			</form>
+		  </div>
+		  <div class="option">
+			<form action="/Search/SearchProperties" method="get">
+			  <input type="hidden" name="City" value="Lahore">
+			  <button type="submit" class="btn">Lahore</button>
+			</form>
+		  </div>
+		  <div class="option">
+			<form action="/Search/SearchProperties" method="get">
+			  <input type="hidden" name="City" value="Karachi">
+			  <button type="submit" class="btn">Karachi</button>
+			</form>
+		  </div>
+		  <div class="option">
+			<form action="/Search/SearchProperties" method="get">
+			  <input type="hidden" name="Category" value="Commercial">
+			  <button type="submit" class="btn">Commercial</button>
+			</form>
+		  </div>
+		</div>
+	  </div>
+
+	  <!-- Plots Card -->
+	  <div class="card ms-3">
+		<div class="card-header">
+		  <i class="bi bi-geo-alt-fill fs-2 me-1" style="color: #ff7525;"></i>
+		  <h3 class="pt-2">Plots</h3>
+		</div>
+		<div class="card-tabs">
+		  <span class="tab active">Popular</span>
+		  <span class="tab">Type</span>
+		  <span class="tab">Area Size</span>
+		</div>
+		<div class="card-content">
+		  <div class="option">
+			<form action="/Search/SearchProperties" method="get">
+			  <input type="hidden" name="Category" value="Industrial">
+			  <button type="submit" class="btn">Industrial</button>
+			</form>
+		  </div>
+		  <div class="option">
+			<form action="/Search/SearchProperties" method="get">
+			  <input type="hidden" name="MaxSize" value="10">
+			  <button type="submit" class="btn">10 Marla</button>
+			</form>
+		  </div>
+		  <div class="option">
+			<form action="/Search/SearchProperties" method="get">
+			  <input type="hidden" name="Purpose" value="Installment">
+			  <button type="submit" class="btn">On Installments</button>
+			</form>
+		  </div>
+		</div>
+	  </div>
+
+	  <!-- Commercial Card -->
+	  <div class="card ms-3">
+		<div class="card-header">
+		  <i class="bi bi-buildings-fill fs-2 me-1" style="color: #ff7525;"></i>
+		  <h3 class="pt-2">Offices</h3>
+		</div>
+		<div class="card-tabs">
+		  <span class="tab active">Popular</span>
+		  <span class="tab">Type</span>
+		  <span class="tab">Area Size</span>
+		</div>
+		<div class="card-content">
+		  <div class="option">
+			<form action="/Search/SearchProperties" method="get">
+			  <input type="hidden" name="City" value="Islamabad">
+			  <button type="submit" class="btn">Islamabad</button>
+			</form>
+		  </div>
+		  <div class="option">
+			<form action="/Search/SearchProperties" method="get">
+			  <input type="hidden" name="MaxSize" value="2">
+			  <button type="submit" class="btn">2 Marla</button>
+			</form>
+		  </div>
+		  <div class="option">
+			<form action="/Search/SearchProperties" method="get">
+			  <input type="hidden" name="Purpose" value="Installment">
+			  <button type="submit" class="btn">On Installments</button>
+			</form>
+		  </div>
+		  <div class="option">
+			<form action="/Search/SearchProperties" method="get">
+			  <input type="hidden" name="PropertyType" value="Shop">
+			  <button type="submit" class="btn">Small Shops</button>
+			</form>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+
+
+
+	<!-- Browse Categories Button -->
+	<div class="row bg-secondary">
+		<div class="col-12 text-center mt-5">
+			<a href="/Search/ListFilters" class="browse btn btn-primary btn-lg px-5 py-3" style="background-color: #ff7525; border-radius: 30px; color: white; text-decoration: none;border-color:none;margin-bottom:35px;">
+				Browse Categories
+			</a>
+		</div>
+	</div>
+</div>

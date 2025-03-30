@@ -1,0 +1,30 @@
+﻿.navborder {
+    border-radius: 50px;
+    background-color: black;
+}
+
+.nav-link, .navbar-brand {
+    color: white;
+}
+
+    .nav-link:hover, .nav-link.active {
+        background-color: #ff7525;
+        color: white;
+        transition: background-color 0.3s ease-in-out;
+        border-radius: 15px;
+        font-family: 'PP Hatton medium';
+    }
+
+.navbar-nav .nav-link.active {
+    background-color: #ff7525;
+    color: white;
+}
+
+    button:hover, button:active {
+        background-color: #ff7525;
+        color: white;
+        transition: background-color 0.3s ease-in-out;
+        border-radius: 15px;
+        font-family: 'PP Hatton medium';
+    }
+

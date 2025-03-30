@@ -1,0 +1,141 @@
+﻿
+.heading {
+    font-family:'PP Hatton bold';
+}
+.img {
+    position: absolute;
+    top: 50px;
+    max-width: 933px;
+    height: 800px;
+    right: 0px;
+    margin-right: none;
+    padding-right: none;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    font-family:'Poppins Regular';
+}
+
+.form-select {
+    margin-left: none;
+    border: none;
+    padding-left: none;
+    font-family: 'PP Hatton bold';
+}
+
+    .form-select:hover {
+        border: none;
+        cursor: pointer;
+    }
+
+select.form-select:focus {
+    background-color: #f8f6f6;
+}
+
+.search {
+    border: 0px;
+    border-radius: 200px;
+    color: white;
+    background-color: #ff7525;
+    padding-left: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-right: 0%;
+}
+
+a {
+    border-style:none;
+    border-color:none;
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual Card */
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+    .card-header .icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+.card-tabs {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+    .card-tabs .tab {
+        font-size: 14px;
+        cursor: pointer;
+        color: #999;
+    }
+
+        .card-tabs .tab.active {
+            color: black;
+            font-weight: bold;
+            border-bottom: 2px solid black;
+        }
+
+.card-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 15px;
+}
+
+.option {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+@media (max-width: 1346px) {
+    .img {
+        opacity: 30%;
+    }
+
+    .category {
+        margin-top: 200px;
+    }
+
+    .top {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

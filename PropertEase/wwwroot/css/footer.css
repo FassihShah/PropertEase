@@ -1,0 +1,92 @@
+﻿.footer {
+    background-color: #222;
+    padding: 40px 0;
+    color: #fff;
+}
+
+    .footer h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+    .footer h2 {
+        color: #fff;
+    }
+    .footer p {
+        color: #fff;
+    }
+    .footer ul {
+        list-style: none;
+        padding: 0;
+        color: #fff;
+    }
+
+    .footer ul li {
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+    .footer form {
+        display: flex;
+    }
+
+    .footer input[type="email"] {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        flex-grow: 1;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .footer button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #ff7525;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 70px;
+    }
+
+    .footer .social-icons a {
+        margin-right: 10px;
+        font-size: 24px;
+        color: #fff;
+    }
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+        margin-right: none;
+    }
+
+    .footer .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+    @font-face {
+        font-family: 'PP Hatton medium';
+        src: url('../fonts/PP Hatton Medium 500.otf') format('opentype');
+    }
+
+    @font-face {
+        font-family: 'Poppins Regular';
+        src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'PP Hatton bold';
+        src: url('../fonts/PP Hatton Bold 700.otf') format('opentype');
+    }

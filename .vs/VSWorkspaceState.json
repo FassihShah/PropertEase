@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Application",
+    "\\Application\\Services",
+    "\\Domain",
+    "\\Infrastructure",
+    "\\Infrastructure\\Identity",
+    "\\PropertEase",
+    "\\PropertEase\\Controllers"
+  ],
+  "SelectedNode": "\\Infrastructure\\bin",
+  "PreviewInSolutionExplorer": false
+}

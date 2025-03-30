@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Agent Signup";
+}
+<body>
+    <div class="agent-container">
+        <link rel="stylesheet" href="~/css/agentsignup.css" />
+        <div class="agent-card">
+            <h3 style="font-family: 'PP Hatton bold';">Join as an Agent</h3>
+            <p class="text-center text-light pt-2 pb-2">
+                Unlock unlimited property listings and grow your business as a trusted agent.
+            </p>
+            <form method="post" asp-controller="User" asp-action="AgentSignup">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                <!-- Personal Information -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" name="fullName" placeholder="Enter your full name" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" placeholder="Enter your email" required />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Enter a strong password" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm your password" required />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" name="phoneNumber" placeholder="Enter your phone number" required />
+                </div>
+
+                <!-- Business Information -->
+                <div class="mb-3">
+                    <label class="form-label">Agency Name</label>
+                    <input type="text" class="form-control" name="agencyName" placeholder="Enter your agency name" required />
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">License Number</label>
+                        <input type="text" class="form-control" name="agentLicenseNumber" placeholder="Enter your license number" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Operating Region</label>
+                        <select class="form-select" name="region">
+                            <option value="Lahore">Lahore</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-submit">Join Now</button>
+            </form>
+
+            <div class="form-footer">
+                <p>Already have an account? <a href="/User/Login">Log In</a></p>
+            </div>
+        </div>
+    </div>
+</body>

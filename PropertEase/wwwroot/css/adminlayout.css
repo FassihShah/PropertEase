@@ -1,0 +1,68 @@
+﻿body {
+    font-family: 'Poppins Regular';
+    background-color: #FED7AA;
+}
+
+.sidebar {
+    height: 100vh;
+    background-color: #343a40;
+    color: #fff;
+    position: fixed;
+    width: 250px;
+    padding-top: 20px;
+}
+
+    .sidebar a {
+        color: #adb5bd;
+        text-decoration: none;
+        display: block;
+        padding: 10px 20px;
+        border-radius: 4px;
+    }
+
+        .sidebar a:hover {
+            background-color: #495057;
+            color: #fff;
+        }
+
+.active {
+    background-color: #495057;
+    color: #fff;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .profile-section img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 2px solid #EA580C;
+    }
+
+    .profile-section h5 {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .profile-section p {
+        color: #adb5bd;
+        font-size: 0.9rem;
+    }
+
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+@font-face {
+    font-family: 'PP Hatton medium';
+    src: url('../fonts/PP Hatton Medium 500.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
