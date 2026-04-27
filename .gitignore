@@ -1,0 +1,28 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.rsuser
+*.userosscache
+*.sln.docstates
+
+# Build and publish output
+artifacts/
+publish/
+*.nupkg
+*.snupkg
+
+# Local configuration and secrets
+appsettings.Development.json
+secrets.json
+
+# Runtime uploads
+**/wwwroot/Uploads/*
+!**/wwwroot/Uploads/.gitkeep
+
+# Logs and OS/editor files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db

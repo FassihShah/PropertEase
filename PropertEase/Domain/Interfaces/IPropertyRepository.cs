@@ -9,7 +9,7 @@ namespace Domain.Interfaces
 {
     public interface IPropertyRepository
     {
-        Task<Property> GetByIdAsync(int propertyId);
+        Task<Property?> GetByIdAsync(int propertyId);
         Task<List<Property>> GetAllAsync();
         Task<List<Property>> GetBySellerIdAsync(string sellerId);
         Task AddAsync(Property property);

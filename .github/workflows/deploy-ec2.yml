@@ -1,0 +1,104 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_VERSION: 8.0.x
+  SOLUTION_PATH: PropertEase/PropertEase.sln
+  PROJECT_PATH: PropertEase/PropertEase/PropertEase.csproj
+  PUBLISH_DIR: publish
+  APP_DIR: /var/www/propertease
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Restore
+        run: dotnet restore "${{ env.SOLUTION_PATH }}"
+
+      - name: Build
+        run: dotnet build "${{ env.SOLUTION_PATH }}" --configuration Release --no-restore
+
+      - name: Publish
+        run: dotnet publish "${{ env.PROJECT_PATH }}" --configuration Release --no-build --output "${{ env.PUBLISH_DIR }}"
+
+      - name: Package publish output
+        run: tar -czf propertease.tar.gz -C "${{ env.PUBLISH_DIR }}" .
+
+      - name: Prepare SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/ec2_key
+          chmod 600 ~/.ssh/ec2_key
+          ssh-keyscan -H "${{ secrets.EC2_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Prepare environment file
+        env:
+          SEED_ADMIN_EMAIL: ${{ secrets.SEED_ADMIN_EMAIL }}
+          SEED_ADMIN_PASSWORD: ${{ secrets.SEED_ADMIN_PASSWORD }}
+        run: |
+          {
+            printf '%s\n' 'ASPNETCORE_ENVIRONMENT=Production'
+            printf '%s\n' 'ASPNETCORE_URLS=http://127.0.0.1:5000'
+            printf '%s\n' 'Database__Provider=Sqlite'
+            printf '%s\n' 'Database__EnsureCreated=true'
+            printf '%s\n' 'Database__AutoMigrate=false'
+            printf '%s\n' 'ConnectionStrings__DefaultConnection=Data Source=/var/www/propertease/data/propertease.db'
+            printf '%s\n' 'DataProtection__KeysPath=/var/www/propertease/keys'
+            printf '%s\n' 'Security__UseHttpsRedirection=false'
+            printf '%s\n' 'Security__UseHsts=false'
+            printf '%s\n' "SeedAdmin__Email=$SEED_ADMIN_EMAIL"
+            printf '%s\n' "SeedAdmin__Password=$SEED_ADMIN_PASSWORD"
+          } > propertease.env
+
+      - name: Upload files
+        run: |
+          scp -i ~/.ssh/ec2_key propertease.tar.gz "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/propertease.tar.gz"
+          scp -i ~/.ssh/ec2_key deploy/propertease.service "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/propertease.service"
+          scp -i ~/.ssh/ec2_key deploy/propertease.nginx "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/propertease.nginx"
+          scp -i ~/.ssh/ec2_key propertease.env "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/propertease.env"
+
+      - name: Deploy on EC2
+        run: |
+          ssh -i ~/.ssh/ec2_key "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" <<'EOF'
+          set -euo pipefail
+          RELEASE_DIR="/var/www/propertease/releases/${{ github.sha }}"
+
+          sudo mkdir -p "$RELEASE_DIR" /var/www/propertease/data /var/www/propertease/keys /etc/propertease
+          sudo tar -xzf /tmp/propertease.tar.gz -C "$RELEASE_DIR"
+          sudo chown -R www-data:www-data /var/www/propertease
+
+          sudo mv /tmp/propertease.env /etc/propertease/propertease.env
+          sudo chmod 600 /etc/propertease/propertease.env
+          sudo chown root:root /etc/propertease/propertease.env
+
+          sudo mv /tmp/propertease.service /etc/systemd/system/propertease.service
+          sudo mv /tmp/propertease.nginx /etc/nginx/sites-available/propertease
+          sudo ln -sfn /etc/nginx/sites-available/propertease /etc/nginx/sites-enabled/propertease
+          sudo rm -f /etc/nginx/sites-enabled/default
+
+          sudo ln -sfn "$RELEASE_DIR" /var/www/propertease/current
+          sudo systemctl daemon-reload
+          sudo systemctl enable propertease
+          sudo nginx -t
+          sudo systemctl restart propertease
+          sudo systemctl restart nginx
+
+          sudo find /var/www/propertease/releases -mindepth 1 -maxdepth 1 -type d | sort | head -n -5 | xargs -r sudo rm -rf
+          EOF

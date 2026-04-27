@@ -24,7 +24,7 @@ namespace Infrastructure.Repositories
             return await _context.PropertyTypes.ToListAsync();
         }
 
-        public async Task<PropertyType> GetByIdAsync(int id)
+        public async Task<PropertyType?> GetByIdAsync(int id)
         {
             return await _context.PropertyTypes.FindAsync(id);
         }

@@ -1,8 +1,6 @@
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using Microsoft.EntityFrameworkCore;
-using Infrastructure.Identity;
 using Application.Interfaces;
 
 namespace PropertEase.Controllers
@@ -40,6 +38,7 @@ namespace PropertEase.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult SubmitForm(string type, string name, string email, string location, int price, int size)
         {
             TempData["Message"] = "Inquiry submitted successfully!";

@@ -1,19 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using System.Linq;
-using System.Collections.Generic;
+using Application.Interfaces;
 using Domain.Entities;
 using Domain.Entities.ViewModels;
-using Infrastructure.Identity;
-using System.Security.Claims;
-using Microsoft.AspNetCore.Identity;
-using Application.Interfaces;
-using Domain.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Globalization;
 
 namespace PropertEase.Controllers
 {
     public class PropertyController : Controller
     {
+        private static readonly HashSet<string> AllowedImageExtensions = new(StringComparer.OrdinalIgnoreCase)
+        {
+            ".jpg", ".jpeg", ".png", ".webp"
+        };
+
+        private const long MaxImageBytes = 5 * 1024 * 1024;
+
         private readonly IUserService _userService;
         private readonly IWebHostEnvironment _environment;
         private readonly IPropertyService _propertyService;
@@ -31,8 +35,7 @@ namespace PropertEase.Controllers
             IPropertyPurposeService propertyPurposeService,
             IPropertyTypeService propertyTypeService,
             IUserService userService,
-            IWebHostEnvironment environment
-            )
+            IWebHostEnvironment environment)
         {
             _propertyService = propertyService;
             _locationService = locationService;
@@ -44,62 +47,65 @@ namespace PropertEase.Controllers
             _environment = environment;
         }
 
+        [Authorize(Roles = "Agent,Admin")]
         [HttpGet]
         public async Task<IActionResult> AddProperty()
         {
-            ViewBag.PropertyTypes = await _propertyTypeService.GetAllAsync();
-            ViewBag.Categories = await _categoryService.GetAllAsync();
-            ViewBag.Purposes = await _propertyPurposeService.GetAllAsync();
+            await PopulatePropertyLists();
             return View();
         }
 
+        [Authorize(Roles = "Agent,Admin")]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddProperty(IFormCollection form)
         {
-            if (!ModelState.IsValid)
+            if (!TryReadPropertyForm(form, out var property, out var location, out var errorMessage))
             {
-                ViewBag.PropertyTypes = await _propertyTypeService.GetAllAsync();
-                ViewBag.Categories = await _categoryService.GetAllAsync();
-                ViewBag.Purposes = await _propertyPurposeService.GetAllAsync();
+                await PopulatePropertyLists();
+                ModelState.AddModelError(string.Empty, errorMessage);
                 return View();
             }
 
             var userId = await _userService.GetCurrentUserIdAsync();
-
-            var property = new Property
+            if (string.IsNullOrWhiteSpace(userId))
             {
-                Title = form["Title"],
-                Description = form["Description"],
-                PropertyType = await _propertyTypeService.GetByIdAsync( int.Parse(form["PropertyTypeID"])) ,
-                Price = decimal.Parse(form["Price"]),
-                Bedrooms = int.Parse(form["Bedrooms"]),
-                Bathrooms = int.Parse(form["Bathrooms"]),
-                Size = int.Parse(form["Size"]),
-                Category = await _categoryService.GetByIdAsync( int.Parse(form["CategoryID"])) ,
-                Purpose =  await _propertyPurposeService.GetByIdAsync( int.Parse(form["PurposeID"])),
-                SellerId = userId
-            };
+                return Challenge();
+            }
+
+            var propertyType = await _propertyTypeService.GetByIdAsync(int.Parse(form["PropertyTypeID"]));
+            var category = await _categoryService.GetByIdAsync(int.Parse(form["CategoryID"]));
+            var purpose = await _propertyPurposeService.GetByIdAsync(int.Parse(form["PurposeID"]));
+            if (propertyType == null || category == null || purpose == null)
+            {
+                await PopulatePropertyLists();
+                ModelState.AddModelError(string.Empty, "Please choose valid property type, category, and purpose.");
+                return View();
+            }
+
+            property.PropertyType = propertyType;
+            property.Category = category;
+            property.Purpose = purpose;
+            property.SellerId = userId;
 
             await _propertyService.AddAsync(property);
 
-            var location = new Location
-            {
-                City = form["City"],
-                Area = form["Area"],
-                Street = form["Street"],
-                PropertyId = property.PropertyId
-            };
-
+            location.PropertyId = property.PropertyId;
             await _locationService.AddAsync(location);
 
             foreach (var imageFile in form.Files)
             {
-                var image = new Image
+                var imageUrl = SaveImage(imageFile);
+                if (imageUrl == null)
+                {
+                    continue;
+                }
+
+                await _imageService.AddAsync(new Image
                 {
                     PropertyId = property.PropertyId,
-                    Url = SaveImage(imageFile)
-                };
-                await _imageService.AddAsync(image);
+                    Url = imageUrl
+                });
             }
 
             return RedirectToAction("PropertyDetails", new { id = property.PropertyId });
@@ -108,48 +114,135 @@ namespace PropertEase.Controllers
         public async Task<IActionResult> PropertyDetails(int id)
         {
             var model = await _propertyService.GetPropertyDetailsAsync(id);
+            if (model == null)
+            {
+                return NotFound();
+            }
 
             return View(model);
         }
 
-        public async Task<IActionResult> ListProperties(PropertySearchModel model)
+        public IActionResult ListProperties(PropertySearchModel model)
         {
-            return RedirectToAction("SearchProperties", "Search", new { model.City, model.PropertyType, model.Category, model.Purpose, model.MinSize, model.MaxSize, model.MinPrice, model.MaxPrice }); 
+            return RedirectToAction("SearchProperties", "Search", new { model.City, model.PropertyType, model.Category, model.Purpose, model.MinSize, model.MaxSize, model.MinPrice, model.MaxPrice });
         }
 
-        private string SaveImage(IFormFile file)
-        {
-            if (file != null && file.Length > 0)
-            {
-                var uploadsFolder = Path.Combine(_environment.WebRootPath, "Uploads");
-                if (!Directory.Exists(uploadsFolder))
-                {
-                    Directory.CreateDirectory(uploadsFolder);
-                }
-
-                var uniqueFileName = $"{Path.GetFileNameWithoutExtension(file.FileName)}_{Path.GetExtension(file.FileName)}";
-                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    file.CopyTo(fileStream);
-                }
-
-                return $"/Uploads/{uniqueFileName}";
-            }
-            return null;
-        }
-
+        [Authorize]
         public async Task<IActionResult> ConfirmDelete(int id)
         {
             var property = await _propertyService.GetByIdAsync(id);
+            if (property == null)
+            {
+                return NotFound();
+            }
+
+            var userId = await _userService.GetCurrentUserIdAsync();
+            if (property.SellerId != userId && !User.IsInRole("Admin"))
+            {
+                return Forbid();
+            }
+
             return View(property);
         }
 
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
+            var property = await _propertyService.GetByIdAsync(id);
+            if (property == null)
+            {
+                return NotFound();
+            }
+
+            var userId = await _userService.GetCurrentUserIdAsync();
+            if (property.SellerId != userId && !User.IsInRole("Admin"))
+            {
+                return Forbid();
+            }
+
             await _propertyService.DeleteAsync(id);
-            return RedirectToAction("MyProperties", "User");
+            return User.IsInRole("Admin")
+                ? RedirectToAction("AllProperties", "Admin")
+                : RedirectToAction("MyProperties", "User");
+        }
+
+        private async Task PopulatePropertyLists()
+        {
+            ViewBag.PropertyTypes = await _propertyTypeService.GetAllAsync();
+            ViewBag.Categories = await _categoryService.GetAllAsync();
+            ViewBag.Purposes = await _propertyPurposeService.GetAllAsync();
+        }
+
+        private static bool TryReadPropertyForm(IFormCollection form, out Property property, out Location location, out string errorMessage)
+        {
+            property = new Property();
+            location = new Location();
+            errorMessage = string.Empty;
+
+            if (!decimal.TryParse(form["Price"], NumberStyles.Number, CultureInfo.InvariantCulture, out var price) ||
+                !int.TryParse(form["Bedrooms"], out var bedrooms) ||
+                !int.TryParse(form["Bathrooms"], out var bathrooms) ||
+                !int.TryParse(form["Size"], out var size) ||
+                !int.TryParse(form["PropertyTypeID"], out _) ||
+                !int.TryParse(form["CategoryID"], out _) ||
+                !int.TryParse(form["PurposeID"], out _))
+            {
+                errorMessage = "Please enter valid property details.";
+                return false;
+            }
+
+            property.Title = form["Title"].ToString().Trim();
+            property.Description = form["Description"].ToString().Trim();
+            property.Price = price;
+            property.Bedrooms = bedrooms;
+            property.Bathrooms = bathrooms;
+            property.Size = size;
+
+            location.City = form["City"].ToString().Trim();
+            location.Area = form["Area"].ToString().Trim();
+            location.Street = form["Street"].ToString().Trim();
+
+            if (string.IsNullOrWhiteSpace(property.Title) ||
+                string.IsNullOrWhiteSpace(property.Description) ||
+                string.IsNullOrWhiteSpace(location.City) ||
+                string.IsNullOrWhiteSpace(location.Area) ||
+                string.IsNullOrWhiteSpace(location.Street) ||
+                price < 0 || bedrooms < 0 || bathrooms < 0 || size <= 0)
+            {
+                errorMessage = "Please complete all required property details.";
+                return false;
+            }
+
+            return true;
+        }
+
+        private string? SaveImage(IFormFile file)
+        {
+            if (file == null || file.Length == 0 || file.Length > MaxImageBytes)
+            {
+                return null;
+            }
+
+            var extension = Path.GetExtension(file.FileName);
+            if (!AllowedImageExtensions.Contains(extension))
+            {
+                return null;
+            }
+
+            var uploadsFolder = Path.Combine(_environment.WebRootPath, "Uploads");
+            Directory.CreateDirectory(uploadsFolder);
+
+            var uniqueFileName = $"{Guid.NewGuid():N}{extension.ToLowerInvariant()}";
+            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            using (var fileStream = new FileStream(filePath, FileMode.CreateNew))
+            {
+                file.CopyTo(fileStream);
+            }
+
+            return $"/Uploads/{uniqueFileName}";
         }
     }
 }

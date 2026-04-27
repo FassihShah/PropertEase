@@ -1,12 +1,7 @@
-﻿using Domain.Interfaces;
 using Domain.Entities;
+using Domain.Interfaces;
 using Infrastructure.Identity;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
 {
@@ -21,12 +16,18 @@ namespace Infrastructure.Repositories
 
         public async Task<List<Message>> GetReceivedMessagesAsync(string recipientId)
         {
-            return await _context.Messages.Where(m => m.RecipientId == recipientId).ToListAsync();
+            return await _context.Messages
+                .Where(m => m.RecipientId == recipientId)
+                .OrderByDescending(m => m.SentTime)
+                .ToListAsync();
         }
 
         public async Task<List<Message>> GetSentMessagesAsync(string senderId)
         {
-            return await _context.Messages.Where(m => m.SenderId == senderId).ToListAsync();
+            return await _context.Messages
+                .Where(m => m.SenderId == senderId)
+                .OrderByDescending(m => m.SentTime)
+                .ToListAsync();
         }
 
         public async Task AddAsync(Message message)

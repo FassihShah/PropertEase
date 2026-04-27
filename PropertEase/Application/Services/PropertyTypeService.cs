@@ -23,7 +23,7 @@ namespace Application.Services
             return await _propertyTypeRepository.GetAllAsync();
         }
 
-        public async Task<PropertyType> GetByIdAsync(int typeId)
+        public async Task<PropertyType?> GetByIdAsync(int typeId)
         {
             return await _propertyTypeRepository.GetByIdAsync(typeId);
         }

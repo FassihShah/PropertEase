@@ -24,7 +24,7 @@ namespace Infrastructure.Repositories
             return await _context.Categories.ToListAsync();
         }
 
-        public async Task<Category> GetByIdAsync(int categoryId)
+        public async Task<Category?> GetByIdAsync(int categoryId)
         {
             return await _context.Categories.FindAsync(categoryId);
         }

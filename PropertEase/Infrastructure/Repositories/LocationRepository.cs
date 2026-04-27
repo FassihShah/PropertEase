@@ -30,7 +30,8 @@ namespace Infrastructure.Repositories
         }
         public async Task AddAsync(Location location)
         {
-            _context.Locations.AddAsync(location);
+            await _context.Locations.AddAsync(location);
+            await _context.SaveChangesAsync();
         }
         public async Task DeleteAsync(int id)
         {

@@ -13,11 +13,17 @@
 
 @if (await userService.IsSignedIn())
 {
-    <li class="nav-item" style="margin-left: 140px;">
-        <a class="nav-link @IsActive("/Property/AddProperty")" asp-controller="Property" asp-action="AddProperty" title="Add Property">Add Property</a>
-    </li>
+    @if (User.IsInRole("Agent") || User.IsInRole("Admin"))
+    {
+        <li class="nav-item" style="margin-left: 140px;">
+            <a class="nav-link @IsActive("/Property/AddProperty")" asp-controller="Property" asp-action="AddProperty" title="Add Property">Add Property</a>
+        </li>
+    }
     <li class="nav-item">
-        <a class="nav-link @IsActive("/User/Logout")" asp-controller="User" asp-action="Logout" title="Logout">Logout</a>
+        <form asp-controller="User" asp-action="Logout" method="post" class="d-inline">
+            @Html.AntiForgeryToken()
+            <button type="submit" class="nav-link btn btn-link @IsActive("/User/Logout")" title="Logout">Logout</button>
+        </form>
     </li>
     <li class="nav-item">
         <a class="nav-link @IsActive("/User/Profile")" asp-controller="User" asp-action="Profile" title="Profile">Profile</a>

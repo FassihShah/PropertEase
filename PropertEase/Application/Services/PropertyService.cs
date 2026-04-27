@@ -36,18 +36,19 @@ namespace Application.Services
             return await _propertyRepository.GetAllAsync();
         }
 
-        public async Task<Property> GetByIdAsync(int propertyId)
+        public async Task<Property?> GetByIdAsync(int propertyId)
         {
             return await _propertyRepository.GetByIdAsync(propertyId);
         }
 
-        public async Task<DetailsViewModel> GetPropertyDetailsAsync(int propertyId)
+        public async Task<DetailsViewModel?> GetPropertyDetailsAsync(int propertyId)
         {
             var property = await _propertyRepository.GetByIdAsync(propertyId);
             if (property == null) 
                 return null;
 
             var images = await _imageRepository.GetByPropertyIdAsync(propertyId);
+            var seller = await _userService.GetByIdAsync(property.SellerId);
 
             return new DetailsViewModel
             {
@@ -62,8 +63,8 @@ namespace Application.Services
                 Category = property.Category.Name,
                 Purpose = property.Purpose.Name,
                 ImagesUrl = images.Select(i => i.Url).ToList(),
-                Location = property.Location.ToString(),
-                SellerName = (await _userService.GetByIdAsync(property.SellerId)).FullName
+                Location = property.Location?.ToString() ?? string.Empty,
+                SellerName = seller?.FullName ?? "Unknown seller"
             };
         }
         public async Task<List<Property>> GetBySellerIdAsync(string sellerId)
@@ -116,6 +117,18 @@ namespace Application.Services
             var property = await _propertyRepository.GetByIdAsync(propertyId);
             if (property != null)
             {
+                var location = await _locationRepository.GetByPropertyIdAsync(propertyId);
+                if (location != null)
+                {
+                    await _locationRepository.DeleteAsync(location.LocationId);
+                }
+
+                var images = await _imageRepository.GetByPropertyIdAsync(propertyId);
+                foreach (var image in images)
+                {
+                    await _imageRepository.DeleteAsync(image.ImageId);
+                }
+
                 await _propertyRepository.DeleteAsync(propertyId);
             }
         }

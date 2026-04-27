@@ -1,15 +1,13 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc;
-using Infrastructure.Identity;
-using Domain.Entities;
-using PropertEase.Hubs;
-using Microsoft.AspNetCore.SignalR;
 using Application.Interfaces;
-using System.Security.Claims;
+using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using PropertEase.Hubs;
 
 namespace PropertEase.Controllers
 {
+    [Authorize]
     public class MessageController : Controller
     {
         private readonly IMessageService _messageService;
@@ -28,41 +26,60 @@ namespace PropertEase.Controllers
         public async Task<IActionResult> ReceivedMessages()
         {
             var userId = await _userService.GetCurrentUserIdAsync();
+            if (string.IsNullOrWhiteSpace(userId))
+            {
+                return Challenge();
+            }
 
-            List<Message> messages = await _messageService.GetReceivedMessagesAsync(userId);
+            var messages = await _messageService.GetReceivedMessagesAsync(userId);
             return View(messages);
         }
 
         public async Task<IActionResult> SentMessages()
         {
             var userId = await _userService.GetCurrentUserIdAsync();
+            if (string.IsNullOrWhiteSpace(userId))
+            {
+                return Challenge();
+            }
 
-            List<Message> messages = await _messageService.GetSentMessagesAsync(userId);
+            var messages = await _messageService.GetSentMessagesAsync(userId);
             return View(messages);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> SendMessage(int PropertyId, string FullName, string Email, string MessageContent)
         {
-            if (!User.Identity.IsAuthenticated)
+            var userId = await _userService.GetCurrentUserIdAsync();
+            if (string.IsNullOrWhiteSpace(userId))
             {
-                return RedirectToAction("Login", "User");
+                return Challenge();
             }
 
-            var userId = await _userService.GetCurrentUserIdAsync();
+            var property = await _propertyService.GetByIdAsync(PropertyId);
+            if (property == null)
+            {
+                return NotFound();
+            }
 
-            var recipientId = (await _propertyService.GetByIdAsync(PropertyId)).SellerId;
+            if (string.IsNullOrWhiteSpace(MessageContent))
+            {
+                return RedirectToAction("PropertyDetails", "Property", new { id = PropertyId });
+            }
 
             var message = new Message
             {
                 PropertyId = PropertyId,
-                Content = MessageContent,
+                Content = MessageContent.Trim(),
                 SenderId = userId,
-                RecipientId = recipientId,
-                SentTime = DateTime.Now
+                RecipientId = property.SellerId,
+                SentTime = DateTime.UtcNow
             };
 
             await _messageService.SendMessageAsync(message);
+            await _hubContext.Clients.User(property.SellerId).SendAsync("ReceiveMessage", message.Content);
+
             return RedirectToAction("PropertyDetails", "Property", new { id = PropertyId });
         }
     }

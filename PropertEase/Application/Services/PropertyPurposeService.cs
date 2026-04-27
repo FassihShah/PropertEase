@@ -23,7 +23,7 @@ namespace Application.Services
             return await _propertyPurposeRepository.GetAllAsync();
         }
 
-        public async Task<PropertyPurpose> GetByIdAsync(int purposeId)
+        public async Task<PropertyPurpose?> GetByIdAsync(int purposeId)
         {
             return await _propertyPurposeRepository.GetByIdAsync(purposeId);
         }

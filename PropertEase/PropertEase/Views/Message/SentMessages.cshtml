@@ -129,9 +129,10 @@
         {
             foreach (var message in Model)
             {
+                var recipient = await userService.GetByIdAsync(message.RecipientId);
                 <div class="message-card">
                         <div class="message-header">
-                                <h5 class="mb-1">To: @((await userService.GetByIdAsync(message.RecipientId)).FullName)</h5>
+                                <h5 class="mb-1">To: @(recipient?.FullName ?? "Deleted user")</h5>
                             <small>@message.SentTime.ToString("g")</small>
                         </div>
                         <div class="message-body">

@@ -129,9 +129,10 @@
                 {
                     foreach (var message in Model)
                     {
+                        var sender = await userService.GetByIdAsync(message.SenderId);
                         <div class="message-card">
                             <div class="message-header">
-                                <h5 class="mb-1">@((await userService.GetByIdAsync(message.SenderId)).FullName)</h5>
+                                <h5 class="mb-1">@(sender?.FullName ?? "Deleted user")</h5>
                                 <small>@message.SentTime.ToString("g")</small>
                             </div>
                             <div class="message-body">
@@ -142,7 +143,7 @@
                 }
                 else
                 {
-                    <p>No sent messages found.</p>
+                    <p>No received messages found.</p>
                 }
             </div>
         </div>

@@ -23,7 +23,7 @@ namespace Application.Services
             return await _categoryRepository.GetAllAsync();
         }
 
-        public async Task<Category> GetByIdAsync(int categoryId)
+        public async Task<Category?> GetByIdAsync(int categoryId)
         {
             return await _categoryRepository.GetByIdAsync(categoryId);
         }

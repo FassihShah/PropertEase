@@ -1,0 +1,16 @@
+[Unit]
+Description=PropertEase ASP.NET Core demo
+After=network.target
+
+[Service]
+WorkingDirectory=/var/www/propertease/current
+ExecStart=/usr/bin/dotnet /var/www/propertease/current/PropertEase.dll
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=propertease
+User=www-data
+EnvironmentFile=/etc/propertease/propertease.env
+
+[Install]
+WantedBy=multi-user.target

@@ -119,6 +119,7 @@
                                 <button type="submit" class="btn btn-info btn-sm mb-1">Properties</button>
                             </form>
                             <form action="@Url.Action("DeleteUser", "Admin")" method="post" style="display:inline;">
+                                @Html.AntiForgeryToken()
                                 <input type="hidden" name="id" value="@user.Id" />
                                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                             </form>

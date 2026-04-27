@@ -96,10 +96,11 @@
                         <td>@property.PropertyId</td>
                         <td>@property.SellerId</td>
                         <td>@property.Title</td>
-                        <td>@((await categoryService.GetByIdAsync(property.Category.CategoryId)).Name)</td>
+                        <td>@(property.Category?.Name ?? "Uncategorized")</td>
                         <td>@property.Price</td>
                         <td>
                             <form action="@Url.Action("DeleteProperty", "Admin", new {id = property.PropertyId})" method="post" style="display: inline;">
+                                @Html.AntiForgeryToken()
                                 <input type="hidden" name="id" value="@property.PropertyId" />
                                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                             </form>

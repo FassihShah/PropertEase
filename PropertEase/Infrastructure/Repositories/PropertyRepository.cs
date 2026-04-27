@@ -19,7 +19,7 @@ namespace Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task<Property> GetByIdAsync(int propertyId)
+        public async Task<Property?> GetByIdAsync(int propertyId)
         {
             return await _context.Properties.Include(p => p.Location).Include(p => p.PropertyType).Include(p => p.Category).Include(p => p.Purpose).Where(p=> p.PropertyId == propertyId).FirstOrDefaultAsync();
         }

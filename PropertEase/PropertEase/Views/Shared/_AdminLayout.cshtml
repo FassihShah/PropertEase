@@ -3,7 +3,7 @@
 @{
     Layout = null;
     var id = await userService.GetCurrentUserIdAsync();
-    var user = await userService.GetByIdAsync(id);
+    var user = string.IsNullOrWhiteSpace(id) ? null : await userService.GetByIdAsync(id);
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,7 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="profile-section">
-            @if ((await userService.IsAuthenticated()) && user.ProfilePicture != null)
+            @if ((await userService.IsAuthenticated()) && user?.ProfilePicture != null)
             {
                 <img src="@user.ProfilePicture.Url" alt="Profile Picture" />
             }
@@ -30,7 +30,7 @@
             {
                 <img src="https://via.placeholder.com/100" alt="Default Profile Picture" />
             }
-            <h5>@user.FullName</h5>
+            <h5>@user?.FullName</h5>
             <a href="@Url.Action("AdminProfile", "Admin")" class="text-decoration-none">Administrator</a>
         </div>
         <hr style="border-color: #495057;">

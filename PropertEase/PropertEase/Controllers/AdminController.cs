@@ -1,12 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Infrastructure.Identity;
-using Domain.Entities;
 using Application.Interfaces;
-using Application.Services;
-using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
 namespace PropertEase.Controllers
 {
     [Authorize(Roles = "Admin")]
@@ -42,28 +37,48 @@ namespace PropertEase.Controllers
             var admins = await _userService.GetAdminsAsync();
             return View(admins);
         }
+
         public async Task<ActionResult> Dashboard()
         {
             var userId = await _userService.GetCurrentUserIdAsync();
+            if (string.IsNullOrWhiteSpace(userId))
+            {
+                return Challenge();
+            }
+
             var user = await _userService.GetByIdAsync(userId);
+            if (user == null)
+            {
+                await _userService.LogoutAsync();
+                return RedirectToAction("Login", "User");
+            }
+
             return View(user);
         }
 
         public async Task<ActionResult> AllProperties()
         {
-            var properties = await _propertyService.GetAllAsync(); 
+            var properties = await _propertyService.GetAllAsync();
             return View(properties);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteUser(string userId)
         {
+            var currentUserId = await _userService.GetCurrentUserIdAsync();
+            if (string.IsNullOrWhiteSpace(userId) || userId == currentUserId)
+            {
+                return RedirectToAction("AllUsers");
+            }
+
             await _userService.DeleteUserAsync(userId);
             return RedirectToAction("AllUsers");
         }
+
         public async Task<IActionResult> ViewUserProperties(string userId)
         {
-            var userProperties = await _propertyService.GetBySellerIdAsync(userId); ;
+            var userProperties = await _propertyService.GetBySellerIdAsync(userId);
             return View("ViewUserProperties", userProperties);
         }
 
@@ -73,6 +88,7 @@ namespace PropertEase.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddAdmin(string FullName, string Email, string Password)
         {
             if (string.IsNullOrWhiteSpace(FullName) || string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
@@ -80,17 +96,23 @@ namespace PropertEase.Controllers
                 return View();
             }
 
-            var success = await _userService.CreateUserAsync(FullName, Email, Password, "Admin");
+            var success = await _userService.CreateUserAsync(FullName.Trim(), Email.Trim(), Password, "Admin");
             if (success)
                 return RedirectToAction("AllAdmins");
 
+            ModelState.AddModelError(string.Empty, "Unable to create admin account.");
             return View();
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteProperty(int id)
         {
             var property = await _propertyService.GetByIdAsync(id);
+            if (property == null)
+            {
+                return NotFound();
+            }
 
             var location = await _locationService.GetByPropertyAsync(id);
             var images = await _imageService.GetByPropertyAsync(id);
@@ -109,7 +131,5 @@ namespace PropertEase.Controllers
 
             return RedirectToAction("AllProperties");
         }
-
-
     }
 }

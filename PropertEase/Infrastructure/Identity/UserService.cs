@@ -1,16 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Application.Interfaces;
 using Application;
-using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Application.Interfaces;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
-using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Extensions.Configuration;
 
 namespace Infrastructure.Identity
 {
@@ -20,49 +13,60 @@ namespace Infrastructure.Identity
         private readonly SignInManager<MyApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IConfiguration _configuration;
 
-        public UserService(UserManager<MyApplicationUser> userManager, SignInManager<MyApplicationUser> signInManager, RoleManager<IdentityRole> roleManager, IHttpContextAccessor httpContextAccessor)
+        public UserService(
+            UserManager<MyApplicationUser> userManager,
+            SignInManager<MyApplicationUser> signInManager,
+            RoleManager<IdentityRole> roleManager,
+            IHttpContextAccessor httpContextAccessor,
+            IConfiguration configuration)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _signInManager = signInManager;
             _httpContextAccessor = httpContextAccessor;
-        }
-        public async Task<bool> IsSignedIn()
-        {
-            var user = _httpContextAccessor.HttpContext.User;
-            return _signInManager.IsSignedIn(user);
+            _configuration = configuration;
         }
 
-        public async Task<bool> IsAuthenticated()
+        public Task<bool> IsSignedIn()
         {
-            var user = _httpContextAccessor.HttpContext.User;
-            if (user == null)
-                return false;
-            return user.Identity.IsAuthenticated;
-        }
-        public async Task<string> GetCurrentUserIdAsync()
-        {
-            var user = await _userManager.GetUserAsync(_httpContextAccessor.HttpContext.User);
-            return user.Id;
+            var user = _httpContextAccessor.HttpContext?.User;
+            return Task.FromResult(user != null && _signInManager.IsSignedIn(user));
         }
 
+        public Task<bool> IsAuthenticated()
+        {
+            var user = _httpContextAccessor.HttpContext?.User;
+            return Task.FromResult(user?.Identity?.IsAuthenticated == true);
+        }
+
+        public Task<string?> GetCurrentUserIdAsync()
+        {
+            var user = _httpContextAccessor.HttpContext?.User;
+            return Task.FromResult(user == null ? null : _userManager.GetUserId(user));
+        }
 
         public async Task<UserDTO?> GetByIdAsync(string userId)
         {
+            if (string.IsNullOrWhiteSpace(userId))
+            {
+                return null;
+            }
+
             var user = await _userManager.FindByIdAsync(userId);
             return user == null ? null : MapToDto(user);
         }
 
         public async Task<List<UserDTO>> GetAllUsersAsync()
         {
-            var users = _userManager.Users.ToList();
+            var users = await _userManager.Users.ToListAsync();
             return users.Select(MapToDto).ToList();
         }
 
         public async Task<List<UserDTO>> GetAgentsAsync()
         {
-            var allUsers = _userManager.Users.ToList();
+            var allUsers = await _userManager.Users.ToListAsync();
             var agents = new List<UserDTO>();
 
             foreach (var user in allUsers)
@@ -72,12 +76,13 @@ namespace Infrastructure.Identity
                     agents.Add(MapToDto(user));
                 }
             }
+
             return agents;
         }
 
         public async Task<List<UserDTO>> GetAdminsAsync()
         {
-            var allUsers = _userManager.Users.ToList();
+            var allUsers = await _userManager.Users.ToListAsync();
             var admins = new List<UserDTO>();
 
             foreach (var user in allUsers)
@@ -87,12 +92,18 @@ namespace Infrastructure.Identity
                     admins.Add(MapToDto(user));
                 }
             }
+
             return admins;
         }
 
         public async Task<bool> LoginUserAsync(string email, string password, bool rememberMe)
         {
-            var result = await _signInManager.PasswordSignInAsync(email, password, rememberMe, lockoutOnFailure: false);
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+            {
+                return false;
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(email.Trim(), password, rememberMe, lockoutOnFailure: true);
             return result.Succeeded;
         }
 
@@ -103,9 +114,23 @@ namespace Infrastructure.Identity
 
         public async Task<bool> CreateUserAsync(string fullName, string email, string password, string role)
         {
+            if (string.IsNullOrWhiteSpace(fullName) ||
+                string.IsNullOrWhiteSpace(email) ||
+                string.IsNullOrWhiteSpace(password) ||
+                string.IsNullOrWhiteSpace(role) ||
+                !await _roleManager.RoleExistsAsync(role))
+            {
+                return false;
+            }
+
+            fullName = fullName.Trim();
+            email = email.Trim();
+
             var existingUser = await _userManager.FindByEmailAsync(email);
             if (existingUser != null)
+            {
                 return false;
+            }
 
             var newUser = new MyApplicationUser
             {
@@ -117,17 +142,40 @@ namespace Infrastructure.Identity
 
             var result = await _userManager.CreateAsync(newUser, password);
             if (!result.Succeeded)
+            {
                 return false;
+            }
 
-            await _userManager.AddToRoleAsync(newUser, role);
-            return true;
+            var roleResult = await _userManager.AddToRoleAsync(newUser, role);
+            return roleResult.Succeeded;
         }
 
         public async Task<bool> CreateAgentAsync(string fullName, string email, string password, string licenseNumber, string agencyName, string region, string phoneNumber)
         {
+            if (string.IsNullOrWhiteSpace(fullName) ||
+                string.IsNullOrWhiteSpace(email) ||
+                string.IsNullOrWhiteSpace(password) ||
+                string.IsNullOrWhiteSpace(licenseNumber) ||
+                string.IsNullOrWhiteSpace(agencyName) ||
+                string.IsNullOrWhiteSpace(region) ||
+                string.IsNullOrWhiteSpace(phoneNumber) ||
+                !await _roleManager.RoleExistsAsync("Agent"))
+            {
+                return false;
+            }
+
+            fullName = fullName.Trim();
+            email = email.Trim();
+            licenseNumber = licenseNumber.Trim();
+            agencyName = agencyName.Trim();
+            region = region.Trim();
+            phoneNumber = phoneNumber.Trim();
+
             var existingUser = await _userManager.FindByEmailAsync(email);
             if (existingUser != null)
+            {
                 return false;
+            }
 
             var newAgent = new MyApplicationUser
             {
@@ -143,36 +191,49 @@ namespace Infrastructure.Identity
 
             var result = await _userManager.CreateAsync(newAgent, password);
             if (!result.Succeeded)
+            {
                 return false;
+            }
 
-            await _userManager.AddToRoleAsync(newAgent, "Agent");
-            return true;
+            var roleResult = await _userManager.AddToRoleAsync(newAgent, "Agent");
+            return roleResult.Succeeded;
         }
 
         public async Task<UserDTO?> GetUserByEmailAsync(string email)
         {
-            var user = await _userManager.FindByEmailAsync(email);
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                return null;
+            }
+
+            var user = await _userManager.FindByEmailAsync(email.Trim());
             return user == null ? null : MapToDto(user);
         }
 
         public async Task<bool> IsUserInRoleAsync(string userId, string role)
         {
-            var user = await _userManager.FindByIdAsync(userId);
-            if (user == null) 
+            if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(role))
+            {
                 return false;
-            return await _userManager.IsInRoleAsync(user, role);
+            }
+
+            var user = await _userManager.FindByIdAsync(userId);
+            return user != null && await _userManager.IsInRoleAsync(user, role);
         }
+
         public async Task<bool> UpdateUserAsync(UserDTO userDto)
         {
             var user = await _userManager.FindByIdAsync(userDto.Id);
-            if (user == null) 
+            if (user == null)
+            {
                 return false;
+            }
 
-            user.FullName = userDto.FullName;
-            user.PhoneNumber = userDto.PhoneNumber;
-            user.AgentLicenseNumber = userDto.AgentLicenseNumber;
-            user.AgencyName = userDto.AgencyName;
-            user.Region = userDto.Region;
+            user.FullName = userDto.FullName?.Trim() ?? user.FullName;
+            user.PhoneNumber = userDto.PhoneNumber?.Trim();
+            user.AgentLicenseNumber = userDto.AgentLicenseNumber?.Trim();
+            user.AgencyName = userDto.AgencyName?.Trim();
+            user.Region = userDto.Region?.Trim();
             user.ProfilePicture = userDto.ProfilePicture;
 
             var result = await _userManager.UpdateAsync(user);
@@ -181,29 +242,20 @@ namespace Infrastructure.Identity
 
         public async Task DeleteUserAsync(string userId)
         {
+            if (string.IsNullOrWhiteSpace(userId))
+            {
+                return;
+            }
+
             var user = await _userManager.FindByIdAsync(userId);
             if (user != null)
             {
                 await _userManager.DeleteAsync(user);
             }
         }
-        private UserDTO MapToDto(MyApplicationUser user)
-        {
-            return new UserDTO
-            {
-                Id = user.Id,
-                Email = user.Email,
-                FullName = user.FullName,
-                PhoneNumber = user.PhoneNumber,
-                AgentLicenseNumber = user.AgentLicenseNumber,
-                AgencyName = user.AgencyName,
-                Region = user.Region,
-                ProfilePicture = user.ProfilePicture
-            };
-        }
+
         public async Task SeedRolesAndUsers()
         {
-            // Define roles
             var roles = new[] { "Admin", "Agent", "User" };
 
             foreach (var role in roles)
@@ -214,8 +266,13 @@ namespace Infrastructure.Identity
                 }
             }
 
-            // Create an admin user
-            var adminEmail = "admin@propertease.com";
+            var adminEmail = _configuration["SeedAdmin:Email"] ?? "admin@propertease.com";
+            var adminPassword = _configuration["SeedAdmin:Password"];
+            if (string.IsNullOrWhiteSpace(adminPassword))
+            {
+                return;
+            }
+
             var adminUser = await _userManager.FindByEmailAsync(adminEmail);
             if (adminUser == null)
             {
@@ -224,14 +281,35 @@ namespace Infrastructure.Identity
                     FullName = "Admin",
                     UserName = adminEmail,
                     Email = adminEmail,
-                    EmailConfirmed = true,
+                    EmailConfirmed = true
                 };
-                var result = await _userManager.CreateAsync(adminUser, "Admin@123");
-                if (result.Succeeded)
+
+                var result = await _userManager.CreateAsync(adminUser, adminPassword);
+                if (!result.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(adminUser, "Admin");
+                    return;
                 }
             }
+
+            if (!await _userManager.IsInRoleAsync(adminUser, "Admin"))
+            {
+                await _userManager.AddToRoleAsync(adminUser, "Admin");
+            }
+        }
+
+        private static UserDTO MapToDto(MyApplicationUser user)
+        {
+            return new UserDTO
+            {
+                Id = user.Id,
+                Email = user.Email ?? string.Empty,
+                FullName = user.FullName,
+                PhoneNumber = user.PhoneNumber,
+                AgentLicenseNumber = user.AgentLicenseNumber,
+                AgencyName = user.AgencyName,
+                Region = user.Region,
+                ProfilePicture = user.ProfilePicture
+            };
         }
     }
 }

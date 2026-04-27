@@ -6,7 +6,8 @@
 @{
     ViewData["Title"] = "Details";
     var id = await userService.GetCurrentUserIdAsync();
-    var user = await userService.GetByIdAsync(id);
+    var user = string.IsNullOrWhiteSpace(id) ? null : await userService.GetByIdAsync(id);
+    var property = await propertyService.GetByIdAsync(Model.PropertyId);
 }
 <body>
     <main style="padding: 30px 100px;">
@@ -341,7 +342,14 @@
                     <h3>Contact Agent</h3>
                     <p><i class="fas fa-user"></i> <strong>@Model.SellerName</strong></p>
                 </div>
-                <button class="btn btn-custom" data-toggle="modal" data-target="#contactModal">Message</button>
+                @if (user != null)
+                {
+                    <button class="btn btn-custom" data-toggle="modal" data-target="#contactModal">Message</button>
+                }
+                else
+                {
+                    <a class="btn btn-custom" href="@Url.Action("Login", "User")">Message</a>
+                }
 
                 <!-- Modal Structure -->
                 <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -355,10 +363,11 @@
                             </div>
                             <div class="modal-body">
                                 <form action="@Url.Action("SendMessage", "Message")" method="post">
+                                    @Html.AntiForgeryToken()
                                     <input type="hidden" name="PropertyId" value="@Model.PropertyId" />
-                                    <input type="hidden" id="senderName" value="@user.FullName" />
-                                    <input type="hidden" id="receiverId" value="@((await propertyService.GetByIdAsync(Model.PropertyId)).SellerId)" />
-                                    <input type="hidden" id="propertyTitle" value="@((await propertyService.GetByIdAsync(Model.PropertyId)).Title)" />
+                                    <input type="hidden" id="senderName" value="@user?.FullName" />
+                                    <input type="hidden" id="receiverId" value="@property?.SellerId" />
+                                    <input type="hidden" id="propertyTitle" value="@property?.Title" />
                                     <div class="form-group">
                                         <label for="name">Full Name</label>
                                         <input type="text" class="form-control" id="name" name="FullName" required>
