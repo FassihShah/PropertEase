@@ -1,71 +1,128 @@
-﻿
-.heading {
-    font-family:'PP Hatton bold';
-}
-.img {
-    position: absolute;
-    top: 50px;
-    max-width: 933px;
-    height: 800px;
-    right: 0px;
-    margin-right: none;
-    padding-right: none;
-}
-
-.container-fluid {
+.home-page {
     padding-left: 0;
     padding-right: 0;
-    font-family:'Poppins Regular';
+    font-family: 'Poppins Regular';
+    overflow-x: hidden;
+}
+
+.hero-row {
+    min-height: 720px;
+    position: relative;
+}
+
+.hero-content {
+    margin-top: 4.5rem;
+    padding-left: clamp(1.25rem, 5vw, 4rem);
+    padding-right: clamp(1.25rem, 3vw, 2rem);
+    position: relative;
+    z-index: 2;
+}
+
+.heading {
+    font-family: 'PP Hatton bold';
+    line-height: 1.12;
+    max-width: 760px;
+}
+
+.hero-copy {
+    margin-top: 2rem;
+    max-width: 620px;
+}
+
+.hero-media {
+    min-height: 680px;
+    position: relative;
+}
+
+.img {
+    position: absolute;
+    top: -18px;
+    right: 0;
+    width: min(52vw, 933px);
+    height: min(760px, 78vh);
+    object-fit: cover;
+    object-position: center;
+    border-bottom-left-radius: 48px;
+}
+
+.property-search {
+    margin-top: 1.5rem;
+    max-width: 920px;
+    border-radius: 22px;
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.12);
+    padding: 0.75rem;
+}
+
+.search-field {
+    border-right: 1px solid #c5c4c4;
+    padding: 0.35rem 1rem;
+}
+
+.field-label {
+    margin-left: 0;
+    font-weight: 600;
+    color: #222;
 }
 
 .form-select {
-    margin-left: none;
     border: none;
-    padding-left: none;
+    padding-left: 0;
     font-family: 'PP Hatton bold';
+    background-color: transparent;
 }
 
-    .form-select:hover {
-        border: none;
-        cursor: pointer;
-    }
+.form-select:hover {
+    border: none;
+    cursor: pointer;
+}
 
 select.form-select:focus {
     background-color: #f8f6f6;
+    box-shadow: none;
 }
 
 .search {
-    border: 0px;
-    border-radius: 200px;
+    border: 0;
+    border-radius: 999px;
     color: white;
     background-color: #ff7525;
-    padding-left: 10px;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    margin-left: 30px;
-    margin-top: 5px;
-    margin-right: 0%;
+    width: 52px;
+    height: 52px;
+}
+
+.search:hover,
+.search:focus {
+    background-color: #e96216;
+    color: white;
 }
 
 a {
-    border-style:none;
-    border-color:none;
+    border-style: none;
+}
+
+.browse-heading {
+    color: white;
+    margin: 3rem 0 0.75rem;
+    padding-left: clamp(1.25rem, 6vw, 5rem);
 }
 
 .cards-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 300px));
     gap: 20px;
     padding: 20px;
+    justify-content: center;
 }
 
-/* Individual Card */
 .card {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 300px;
+    width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -77,33 +134,34 @@ a {
     border-bottom: 1px solid #ddd;
 }
 
-    .card-header .icon {
-        width: 24px;
-        height: 24px;
-        margin-right: 10px;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+.card-header .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 .card-tabs {
     display: flex;
     justify-content: space-between;
+    gap: 0.5rem;
     padding: 10px 15px;
     border-bottom: 1px solid #ddd;
     background-color: #f9f9f9;
 }
 
-    .card-tabs .tab {
-        font-size: 14px;
-        cursor: pointer;
-        color: #999;
-    }
+.card-tabs .tab {
+    font-size: 14px;
+    cursor: pointer;
+    color: #777;
+}
 
-        .card-tabs .tab.active {
-            color: black;
-            font-weight: bold;
-            border-bottom: 2px solid black;
-        }
+.card-tabs .tab.active {
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
 
 .card-content {
     display: grid;
@@ -124,18 +182,126 @@ a {
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+.option .btn {
+    width: 100%;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
 
 @media (max-width: 1346px) {
     .img {
-        opacity: 30%;
+        opacity: 0.32;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-row {
+        min-height: auto;
+        padding-bottom: 2.5rem;
     }
 
-    .category {
-        margin-top: 200px;
+    .hero-content {
+        margin-top: 2.75rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
 
-    .top {
-        margin-left: 20px;
-        margin-right: 20px;
+    .heading {
+        font-size: 2.15rem;
+        max-width: none;
+    }
+
+    .hero-copy {
+        margin-top: 1rem;
+        max-width: none;
+    }
+
+    .hero-media {
+        min-height: 280px;
+        margin-top: 1.5rem;
+        padding: 0 1.25rem;
+    }
+
+    .img {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 280px;
+        opacity: 1;
+        border-radius: 28px;
+        display: block;
+    }
+
+    .property-search {
+        margin-top: 1.25rem;
+    }
+
+    .search-field {
+        border-right: 0;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 0.75rem;
+    }
+
+    .search {
+        width: 100%;
+        margin-top: 0.75rem;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, minmax(0, 300px));
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-content {
+        margin-top: 2rem;
+    }
+
+    .heading {
+        font-size: 1.85rem;
+    }
+
+    .property-search {
+        border-radius: 18px;
+        padding: 0.25rem 0.75rem 0.9rem;
+    }
+
+    .field-label {
+        justify-content: center;
+    }
+
+    .form-select {
+        text-align: center;
+        text-align-last: center;
+    }
+
+    .hero-media {
+        min-height: 230px;
+    }
+
+    .img {
+        height: 230px;
+        border-radius: 22px;
+    }
+
+    .browse-heading {
+        margin-top: 2rem;
+        padding-left: 1.25rem;
+        font-size: 1.55rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .card-content {
+        grid-template-columns: 1fr;
+    }
+
+    .browse {
+        width: calc(100% - 2rem);
+        max-width: 320px;
     }
 }

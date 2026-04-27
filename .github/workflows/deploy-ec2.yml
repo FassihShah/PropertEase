@@ -41,6 +41,32 @@ jobs:
       - name: Package publish output
         run: tar -czf propertease.tar.gz -C "${{ env.PUBLISH_DIR }}" .
 
+      - name: Validate deployment secrets
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+          EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+          SEED_ADMIN_EMAIL: ${{ secrets.SEED_ADMIN_EMAIL }}
+          SEED_ADMIN_PASSWORD: ${{ secrets.SEED_ADMIN_PASSWORD }}
+        run: |
+          test -n "$EC2_HOST" || { echo "EC2_HOST is empty"; exit 1; }
+          test -n "$EC2_USER" || { echo "EC2_USER is empty"; exit 1; }
+          test -n "$EC2_SSH_KEY" || { echo "EC2_SSH_KEY is empty"; exit 1; }
+          test -n "$SEED_ADMIN_EMAIL" || { echo "SEED_ADMIN_EMAIL is empty"; exit 1; }
+          test -n "$SEED_ADMIN_PASSWORD" || { echo "SEED_ADMIN_PASSWORD is empty"; exit 1; }
+          case "$EC2_HOST" in
+            *@*|http://*|https://*|*/*|*:*|*" "*)
+              echo "EC2_HOST must be only the public IPv4/DNS name, for example: 100.54.66.202"
+              exit 1
+              ;;
+          esac
+          case "$EC2_USER" in
+            *@*|*/*|*:*|*" "*)
+              echo "EC2_USER must be only the Linux username, for example: ubuntu"
+              exit 1
+              ;;
+          esac
+
       - name: Prepare SSH
         run: |
           mkdir -p ~/.ssh

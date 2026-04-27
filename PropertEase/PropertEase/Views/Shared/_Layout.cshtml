@@ -22,10 +22,10 @@
 <body>
     <header>
         <link rel="stylesheet" href="~/css/navbar.css" />
-        <div class="container">
-            <div class="row gx-5 mt-3 top">
+        <div class="container nav-container">
+            <div class="row gx-0 mt-3 top">
                 <div class="col-12 navborder">
-                    <nav class="navbar navbar-expand-lg">
+                    <nav class="navbar navbar-expand-lg px-3">
                         <div class="container-fluid gx-0">
                             <a class="navbar-brand" style="font-family: 'PP Hatton medium';" href="/Home/Index">PropertEase</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -33,7 +33,7 @@
                                 <i class="bi bi-list" style="color: white;"></i>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav" style="margin-left: 160px;">
+                                <ul class="navbar-nav main-nav">
                                     <li class="nav-item">
                                         <a class="nav-link @IsActive("/Home/Index")" href="/Home/Index">Home</a>
                                     </li>
@@ -62,7 +62,7 @@
     <footer class="footer">
         <link rel="stylesheet" href="~/css/footer.css" />
         <div class="container-fluid">
-            <div class="row ms-4">
+            <div class="row footer-main g-4">
                 <div class="col-md-3 col-sm-12">
                     <h4 class="fw-bold">Subscribe</h4>
                     <form>
@@ -101,7 +101,7 @@
             <div class="row border-top mt-4">
                 <div class="col-12 mt-5">
                     <p class="copyright text-center">Copyright © 2024 PropertEase</p>
-                    <div class="social-icons ms-4">
+                    <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -111,10 +111,7 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
